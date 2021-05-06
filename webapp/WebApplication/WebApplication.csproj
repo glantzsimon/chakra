@@ -322,43 +322,32 @@
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Attributes\NineStarKiCycleEnumMetaDataAttribute.cs" />
-    <Compile Include="Attributes\NineStarKiEnumMetaDataAttribute.cs" />
     <Compile Include="Config\GoogleConfiguration.cs" />
     <Compile Include="Config\MailChimpConfiguration.cs" />
     <Compile Include="Config\ColumnsConfig.cs" />
     <Compile Include="Config\RecaptchaConfiguration.cs" />
     <Compile Include="Config\StripeConfiguration.cs" />
     <Compile Include="Constants\SessionConstants.cs" />
-    <Compile Include="Controllers\BaseNineStarKiController.cs" />
-    <Compile Include="Controllers\LogController.cs" />
-    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Controllers\BaseChakraController.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Helpers\General.cs" />
     <Compile Include="Helpers\ViewBagHelper.cs" />
     <Compile Include="Constants\ViewDataConstants.cs" />
     <Compile Include="Controllers\AccountControllerAjax.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\NineStarKiController.cs" />
+    <Compile Include="Controllers\ChakraController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\HtmlHelpers.cs" />
     <Compile Include="Helpers\SessionHelpers.cs" />
     <Compile Include="Helpers\Separator.cs" />
-    <Compile Include="Options\GaugeOptions.cs" />
     <Compile Include="Options\PaymentsOptions.cs" />
-    <Compile Include="Services\ILogService.cs" />
-    <Compile Include="Services\LogService.cs" />
     <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Options\PanelOptions.cs" />
     <Compile Include="Options\CollapsiblePanelOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Stripe\Charge.cs" />
-    <Compile Include="Services\Stripe\IStripeService.cs" />
-    <Compile Include="Services\Stripe\StripeService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Readme\Elmah.txt" />
@@ -489,8 +478,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Attributes\" />
     <Folder Include="Enums\" />
     <Folder Include="Images\chakracodes\" />
+    <Folder Include="Services\" />
     <Folder Include="Upload\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
@@ -547,6 +538,7 @@
     <Content Include="Views\Log\Index.cshtml" />
     <Content Include="Views\Home\_Modalities.cshtml" />
     <Content Include="Views\Home\_FiveElements.cshtml" />
+    <Content Include="Views\Chakra\Index.cshtml" />
     <None Include="Web.Integration.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -247,9 +247,6 @@
   <ItemGroup>
     <Compile Include="Database\DatabaseInitialiser.cs" />
     <Compile Include="Database\Db.cs" />
-    <Compile Include="Database\Seeds\MembershipOptionsSeeder.cs" />
-    <Compile Include="Database\Seeds\PermissionsSeeder.cs" />
-    <Compile Include="Enums\EConsultationDuration.cs" />
     <Compile Include="Helpers\Methods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -259,6 +256,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Attributes\" />
+    <Folder Include="Database\Seeds\" />
+    <Folder Include="Enums\" />
     <Folder Include="Exceptions\" />
     <Folder Include="Migrations\" />
     <Folder Include="Models\" />
