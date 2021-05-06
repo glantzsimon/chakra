@@ -24,11 +24,9 @@ namespace K9.WebApplication.Options
         public int Quantity { get; set; }
 
         [Required]
-        [Display(ResourceType = typeof(Globalisation.Dictionary), Name = Globalisation.Strings.Labels.AmountToPayLabel)]
         [DataType(DataType.Currency)]
         public double Amount { get; }
 
-        [Display(ResourceType = typeof(Globalisation.Dictionary), Name = Globalisation.Strings.Labels.TotalLabel)]
         [DataType(DataType.Currency)]
         public double Total => Amount;
 
