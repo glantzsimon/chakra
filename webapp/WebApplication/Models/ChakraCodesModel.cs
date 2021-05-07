@@ -16,7 +16,12 @@
         public ChakraCodeDetails Dominant { get; set; }
         
         public ChakraCodeDetails SubDominant { get; set; }
+        
+        public ChakraCodeDetails Guide { get; set; }
+        
+        public ChakraCodeDetails Gift { get; set; }
 
         public bool IsProcessed { get; set; }
+        
     }
 }

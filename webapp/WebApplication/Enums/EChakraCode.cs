@@ -1,5 +1,4 @@
-﻿using System;
-using K9.Globalisation;
+﻿using K9.Globalisation;
 using K9.WebApplication.Attributes;
 
 namespace K9.WebApplication.Enums

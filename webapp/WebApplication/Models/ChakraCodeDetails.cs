@@ -6,13 +6,14 @@ namespace K9.WebApplication.Models
 {
     public class ChakraCodeDetails
     {
-
         public EChakraCode ChakraCode { get; set; }
+        
+        public bool IsActive { get; set; }
 
         public string Name => Attributes.Name;
         
         public string Colour => Attributes.Colour;
-
+        
         private ChakraCodeEnumMetaDataAttribute Attributes => ChakraCode.GetAttribute<ChakraCodeEnumMetaDataAttribute>();
 
     }

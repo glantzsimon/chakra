@@ -8,6 +8,15 @@ namespace K9.WebApplication.Models
 {
     public class PersonModel
     {
+        public PersonModel()
+        {
+        }
+
+        public PersonModel(DateTime dateOfBifth)
+        {
+            DateOfBirth = dateOfBifth;
+        }
+
         [UIHint("Gender")]
         [Required(ErrorMessageResourceType = typeof(Dictionary), ErrorMessageResourceName = Strings.ErrorMessages.FieldIsRequired)]
         public EGender Gender { get; set; }
