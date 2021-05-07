@@ -18,9 +18,10 @@
                     {
                         <div class="row well">
                             <div class="col-md-3 col-xs-12">
-                                <div class="chakra-code-container">
-                                    @Html.Partial("_ChakraCode", Model.Dominant)
-                                </div>
+                                @Html.Partial("_ChakraCode", Model.Dominant)
+                                @Html.Partial("_ChakraCode", Model.SubDominant)
+                                @Html.Partial("_ChakraCode", Model.Guide)
+                                @Html.Partial("_ChakraCode", Model.Gift)
                             </div>
                         </div>
                     }
