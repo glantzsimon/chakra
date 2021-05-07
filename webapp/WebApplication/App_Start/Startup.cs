@@ -53,7 +53,7 @@ namespace K9.WebApplication
             builder.RegisterType<AccountService>().As<IAccountService>().InstancePerRequest();
             builder.RegisterType<FacebookService>().As<IFacebookService>().InstancePerRequest();
             builder.RegisterType<AccountMailerService>().As<IAccountMailerService>().InstancePerRequest();
-            builder.RegisterType<IChakraCodesService>().As<ChakraCodesService>().InstancePerRequest();
+            builder.RegisterType<ChakraCodesService>().As<IChakraCodesService>().InstancePerRequest();
             
             RegisterConfiguration(builder);
 
