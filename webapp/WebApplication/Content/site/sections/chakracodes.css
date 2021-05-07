@@ -7,6 +7,7 @@
     border-radius: 5px;
     padding: 10px;
     background-color: white;
+    width: 100%;
 }
 
     .chakra-code-container h3 {
@@ -22,6 +23,8 @@
     padding: 10px;
     display: flex;
     align-items: center;
+    font-weight: bold;
+    font-size: 1em;
 }
 
     .chakra-code p {
@@ -29,9 +32,11 @@
         width: 100%;
     }
 
-.dominant {
+.Dominant {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.4em;
+    width: 200px;
+    height: 200px;
 }
 
 .chakra-image-container {

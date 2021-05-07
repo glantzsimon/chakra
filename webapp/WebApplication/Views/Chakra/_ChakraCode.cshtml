@@ -1,8 +1,13 @@
-﻿@model K9.WebApplication.Models.ChakraCodeDetails
+﻿@using K9.SharedLibrary.Extensions
+@model K9.WebApplication.Models.ChakraCodeDetails
 
-<div class="chakra-code-container">
+@{
+    var typeClass = Model.TypeName.RemoveSpaces();
+}
+
+<div class="chakra-code-container @typeClass-container">
     <h3>@Model.TypeName</h3>
-    <div class="chakra-code dominant" style="background-color: @Model.Colour.ToLower();">
+    <div class="chakra-code @typeClass" style="background-color: @Model.Colour.ToLower();">
         <p>@Model.Name</p>
     </div>
 </div>
