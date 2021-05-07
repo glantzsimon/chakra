@@ -12,7 +12,7 @@ namespace K9.WebApplication.Tests.Unit.Services
     {
         [Theory]
         [InlineData(1979, 6, 16, EChakraCode.Warrior, EChakraCode.Seer, EChakraCode.Teacher, EChakraCode.Mystic)]
-        [InlineData(1984, 6, 21, EChakraCode.Healer, EChakraCode.Seer, EChakraCode.Healer,EChakraCode.Warrior)]
+        [InlineData(1984, 6, 21, EChakraCode.Healer, EChakraCode.Seer, EChakraCode.Warrior,EChakraCode.Healer)]
         public void CalculateTest(int year, int month, int day, EChakraCode dominant, EChakraCode subdominant, EChakraCode guide, EChakraCode gift)
         {
             var model = new ChakraCodesModel(new PersonModel

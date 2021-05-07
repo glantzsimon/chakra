@@ -67,10 +67,15 @@ namespace K9.WebApplication.Services
             };
         }
 
-        private static int CalculateNumerology(int result)
+        private static int CalculateNumerology(int value)
         {
-            while (result >= 10)
+            var result = 0;
+            while (result >= 10 || result == 0)
             {
+                if (result == 0)
+                {
+                    result = value;
+                }
                 result = result.ToString().Select(e => int.Parse(e.ToString())).Sum();
             }
 
