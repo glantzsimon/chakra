@@ -33,3 +33,15 @@
     font-weight: bold;
     font-size: 1.2em;
 }
+
+.chakra-image-container {
+    width: 100%;
+}
+
+.chakra-image {
+    width: 250px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display: block;
+}

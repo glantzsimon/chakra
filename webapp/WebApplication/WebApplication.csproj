@@ -416,6 +416,7 @@
     <Content Include="Content\_colors.txt" />
     <Content Include="Global.asax" />
     <Content Include="Images\background\stars.jpg" />
+    <Content Include="Images\chakracodes\chakra-person.jpg" />
     <Content Include="Images\company\logo-med.png" />
     <Content Include="Images\company\logo-small.png" />
     <Content Include="Images\company\logo.png" />
@@ -477,7 +478,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\chakracodes\" />
     <Folder Include="Upload\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
