@@ -19,6 +19,7 @@ using System.Configuration;
 using System.Data.Entity;
 using System.IO;
 using System.Web.Mvc;
+using K9.WebApplication.Services;
 
 namespace K9.WebApplication
 {
@@ -52,6 +53,7 @@ namespace K9.WebApplication
             builder.RegisterType<AccountService>().As<IAccountService>().InstancePerRequest();
             builder.RegisterType<FacebookService>().As<IFacebookService>().InstancePerRequest();
             builder.RegisterType<AccountMailerService>().As<IAccountMailerService>().InstancePerRequest();
+            builder.RegisterType<IChakraCodesService>().As<ChakraCodesService>().InstancePerRequest();
             
             RegisterConfiguration(builder);
 
