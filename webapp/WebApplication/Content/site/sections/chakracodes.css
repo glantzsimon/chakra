@@ -2,12 +2,32 @@
     height: 100vh !important;
 }
 
-.chakra-code {
-    width: 80%;
-    height: 80%;
-    border: 2px solid black;
-    border-radius: 10px;
+.chakra-code-container {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
 }
+
+    .chakra-code-container h3 {
+        text-align: center;
+    }
+
+.chakra-code {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    border-radius: 100px;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+    .chakra-code p {
+        text-align: center;
+        width: 100%;
+    }
 
 .dominant {
     font-weight: bold;

@@ -631,6 +631,7 @@
     <Content Include="Views\Chakra\_Element.cshtml" />
     <Content Include="Views\Chakra\_Energy.cshtml" />
     <Content Include="Views\Chakra\_YearlyPlanner.cshtml" />
+    <Content Include="Views\Chakra\_ChakraCode.cshtml" />
     <None Include="Web.Integration.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

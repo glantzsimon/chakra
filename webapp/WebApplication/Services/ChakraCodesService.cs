@@ -30,7 +30,8 @@ namespace K9.WebApplication.Services
 
             return new ChakraCodeDetails
             {
-                ChakraCode = (EChakraCode)result
+                ChakraCode = (EChakraCode)result,
+                TypeName = "Dominant"
             };
         }
 
@@ -41,7 +42,8 @@ namespace K9.WebApplication.Services
             return new ChakraCodeDetails
             {
                 ChakraCode = (EChakraCode)result,
-                IsActive = IsActive(date, 0, 27)
+                IsActive = IsActive(date, 0, 27),
+                TypeName = "Sub Dominant"
             };
         }
 
@@ -52,7 +54,8 @@ namespace K9.WebApplication.Services
             return new ChakraCodeDetails
             {
                 ChakraCode = (EChakraCode)result,
-                IsActive = IsActive(date, 27, 54)
+                IsActive = IsActive(date, 27, 54),
+                TypeName = "Guide"
             };
         }
 
@@ -63,7 +66,8 @@ namespace K9.WebApplication.Services
             return new ChakraCodeDetails
             {
                 ChakraCode = (EChakraCode)result,
-                IsActive = IsActive(date, 54, 81)
+                IsActive = IsActive(date, 54, 81),
+                TypeName = "Gift"
             };
         }
 
