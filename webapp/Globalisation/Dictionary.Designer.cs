@@ -59,5 +59,14 @@ namespace K9.Globalisation {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chakra Codes.
+        /// </summary>
+        public static string ChakraCodes {
+            get {
+                return ResourceManager.GetString("ChakraCodes", resourceCulture);
+            }
+        }
     }
 }
