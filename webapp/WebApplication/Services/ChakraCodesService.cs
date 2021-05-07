@@ -27,7 +27,7 @@ namespace K9.WebApplication.Services
         public ChakraCodeDetails CalculateDominant(DateTime date)
         {
             var result = CalculateNumerology(date.Year + date.Month + date.Day);
-            
+
             return new ChakraCodeDetails
             {
                 ChakraCode = (EChakraCode)result
@@ -47,8 +47,8 @@ namespace K9.WebApplication.Services
 
         public ChakraCodeDetails CalculateGuide(DateTime date)
         {
-         var   result = CalculateNumerology(date.Year);
-            
+            var result = CalculateNumerology(date.Day);
+
             return new ChakraCodeDetails
             {
                 ChakraCode = (EChakraCode)result,
@@ -58,8 +58,8 @@ namespace K9.WebApplication.Services
 
         public ChakraCodeDetails CalculateGift(DateTime date)
         {
-            var   result = CalculateNumerology(date.Year);
-            
+            var result = CalculateNumerology(date.Year);
+
             return new ChakraCodeDetails
             {
                 ChakraCode = (EChakraCode)result,
@@ -80,7 +80,7 @@ namespace K9.WebApplication.Services
         private static bool IsActive(DateTime dateOfBirth, int activeStartYear, int activeEndYear)
         {
             var person = new PersonModel(dateOfBirth);
-            var personYearsOld = person.YearsOld >= 81 ? person.YearsOld - 81  : person.YearsOld;
+            var personYearsOld = person.YearsOld >= 81 ? person.YearsOld - 81 : person.YearsOld;
             return personYearsOld >= activeStartYear && personYearsOld < activeEndYear;
         }
     }
