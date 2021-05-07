@@ -21,7 +21,6 @@ namespace K9.WebApplication.Controllers
             _chakraCodesService = chakraCodesService;
         }
 
-        [Route("calculate")]
         public ActionResult Index()
         {
             var dateOfBirth = new DateTime(DateTime.Now.Year - (27), DateTime.Now.Month, DateTime.Now.Day);

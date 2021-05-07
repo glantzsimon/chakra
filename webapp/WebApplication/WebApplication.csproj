@@ -322,6 +322,7 @@
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Attributes\ChakraCodeEnumMetaDataAttribute.cs" />
     <Compile Include="Config\GoogleConfiguration.cs" />
     <Compile Include="Config\MailChimpConfiguration.cs" />
     <Compile Include="Config\ColumnsConfig.cs" />
@@ -329,12 +330,12 @@
     <Compile Include="Config\StripeConfiguration.cs" />
     <Compile Include="Constants\SessionConstants.cs" />
     <Compile Include="Controllers\BaseChakraController.cs" />
+    <Compile Include="Enums\EChakraCode.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Helpers\General.cs" />
     <Compile Include="Helpers\ViewBagHelper.cs" />
     <Compile Include="Constants\ViewDataConstants.cs" />
     <Compile Include="Controllers\AccountControllerAjax.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ChakraController.cs" />
     <Compile Include="Global.asax.cs">
@@ -344,6 +345,7 @@
     <Compile Include="Helpers\SessionHelpers.cs" />
     <Compile Include="Helpers\Separator.cs" />
     <Compile Include="Models\ChakraCodesModel.cs" />
+    <Compile Include="Models\ChakraCodeDetails.cs" />
     <Compile Include="Options\PaymentsOptions.cs" />
     <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Options\PanelOptions.cs" />
@@ -475,8 +477,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Attributes\" />
-    <Folder Include="Enums\" />
     <Folder Include="Images\chakracodes\" />
     <Folder Include="Upload\" />
     <Folder Include="ViewModels\" />
