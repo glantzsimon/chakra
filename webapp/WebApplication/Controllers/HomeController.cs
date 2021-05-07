@@ -17,11 +17,7 @@ namespace K9.WebApplication.Controllers
 
         public ActionResult Index()
         {
-            //if (_authentication.IsAuthenticated)
-            //{
-            //    return RedirectToAction("MyProfile", "Chakra");
-            //}
-            return View();
+            return RedirectToAction("Calcualte", "Chakra");
         }
        
         public override string GetObjectName()

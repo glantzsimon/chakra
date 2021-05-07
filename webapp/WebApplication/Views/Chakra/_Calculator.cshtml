@@ -1,0 +1,13 @@
+﻿@model K9.WebApplication.Models.ChakraCodesModel
+
+@using (Html.BeginForm("Calculate", "Chakra"))
+{
+    using (Html.BeginBootstrapForm())
+    {
+        @Html.BootstrapEditorFor(model => model.PersonModel.Name)
+        @Html.BootstrapEditorFor(model => model.PersonModel.DateOfBirth)
+        
+        <hr />
+        @Html.BootstrapButton(Dictionary.Calculate, EButtonType.Submit, "", EButtonClass.Large)
+    }
+}

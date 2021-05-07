@@ -343,11 +343,14 @@
     <Compile Include="Helpers\HtmlHelpers.cs" />
     <Compile Include="Helpers\SessionHelpers.cs" />
     <Compile Include="Helpers\Separator.cs" />
+    <Compile Include="Models\ChakraCodesModel.cs" />
     <Compile Include="Options\PaymentsOptions.cs" />
     <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Options\PanelOptions.cs" />
     <Compile Include="Options\CollapsiblePanelOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ChakraCodesService.cs" />
+    <Compile Include="Services\IChakraCodesService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Readme\Elmah.txt" />
@@ -367,15 +370,8 @@
     <Content Include="Content\site\desktop.css" />
     <Content Include="Content\site\elements.css" />
     <Content Include="Content\site\mobile.css" />
-    <Content Include="Content\site\sections\about.css" />
-    <Content Include="Content\site\sections\relationships.css" />
-    <Content Include="Content\site\sections\privacypolicy.css" />
     <Content Include="Content\site\sections\cookies.css" />
-    <Content Include="Content\site\sections\stripe.css" />
-    <Content Include="Content\site\sections\membership.css" />
-    <Content Include="Content\site\sections\ninestar.css" />
-    <Content Include="Content\site\sections\payments.css" />
-    <Content Include="Content\site\sections\archive.css" />
+    <Content Include="Content\site\sections\chakracodes.css" />
     <Content Include="Content\site\pills.css" />
     <Content Include="Content\site\shared-xs.css" />
     <Content Include="Content\site\shared-sm.css" />
@@ -482,7 +478,6 @@
     <Folder Include="Attributes\" />
     <Folder Include="Enums\" />
     <Folder Include="Images\chakracodes\" />
-    <Folder Include="Services\" />
     <Folder Include="Upload\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
@@ -632,6 +627,10 @@
     <Content Include="Views\Shared\_UploadedFilesDisplay.cshtml" />
     <Content Include="Views\Shared\_ValidationSummary.cshtml" />
     <Content Include="Views\Shared\_VideoFilesDisplay.cshtml" />
+    <Content Include="Views\Chakra\_Calculator.cshtml" />
+    <Content Include="Views\Chakra\_Element.cshtml" />
+    <Content Include="Views\Chakra\_Energy.cshtml" />
+    <Content Include="Views\Chakra\_YearlyPlanner.cshtml" />
     <None Include="Web.Integration.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -716,7 +715,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>2626</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost/ninestar</IISUrl>
+          <IISUrl>https://localhost/chakracodes</IISUrl>
           <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
           <IISAppRootUrl>https://localhost/ninestar</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
