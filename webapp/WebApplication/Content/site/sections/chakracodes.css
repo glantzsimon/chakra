@@ -45,3 +45,29 @@
     border-radius: 5px;
     display: block;
 }
+
+.timeline {
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+    .timeline .year-span {
+        border-right: 1px solid #eee;
+        width: 100%;
+        text-align: center;
+    }
+
+    .timeline .active {
+        -webkit-box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+    }
+
+        .timeline .active span {
+            font-weight: bold;
+        }

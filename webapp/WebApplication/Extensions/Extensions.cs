@@ -21,6 +21,14 @@ namespace K9.WebApplication.Extensions
             return $"{substring}{abbrevationSuffix}";
         }
 
-     
+        public static string EncaseInParantheses(this string value)
+        {
+            if (!string.IsNullOrEmpty(value))
+            {
+                return $"({value})";
+            }
+
+            return value;
+        }
     }
 }
