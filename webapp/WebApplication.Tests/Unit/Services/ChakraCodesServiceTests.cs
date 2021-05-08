@@ -11,9 +11,9 @@ namespace K9.WebApplication.Tests.Unit.Services
     public class ChakraCodesServiceTests
     {
         [Theory]
-        [InlineData(1979, 6, 16, EChakraCode.Warrior, EChakraCode.Seer, EChakraCode.Teacher, EChakraCode.Mystic)]
-        [InlineData(1984, 6, 21, EChakraCode.Healer, EChakraCode.Seer, EChakraCode.Warrior,EChakraCode.Healer)]
-        public void CalculateTest(int year, int month, int day, EChakraCode dominant, EChakraCode subdominant, EChakraCode guide, EChakraCode gift)
+        [InlineData(1979, 6, 16, EChakraCode.Warrior, EChakraCode.Seer, EChakraCode.Teacher, EChakraCode.Mystic, EChakraCode.Healer, EChakraCode.Pioneer)]
+        [InlineData(1984, 6, 21, EChakraCode.Healer, EChakraCode.Seer, EChakraCode.Warrior,EChakraCode.Healer, EChakraCode.Communicator, EChakraCode.Seer)]
+        public void CalculateTest(int year, int month, int day, EChakraCode dominant, EChakraCode subdominant, EChakraCode guide, EChakraCode gift, EChakraCode birthYear, EChakraCode currentYear)
         {
             var model = new ChakraCodesModel(new PersonModel
             {
@@ -32,6 +32,8 @@ namespace K9.WebApplication.Tests.Unit.Services
             Assert.Equal(subdominant, result.SubDominant.ChakraCode);
             Assert.Equal(guide, result.Guide.ChakraCode);
             Assert.Equal(gift, result.Gift.ChakraCode);
+            Assert.Equal(birthYear, result.BirthYear.ChakraCode);
+            Assert.Equal(currentYear, result.CurrentYear.ChakraCode);
             
             Assert.False(result.Dominant.IsActive);
             Assert.False(result.SubDominant.IsActive);

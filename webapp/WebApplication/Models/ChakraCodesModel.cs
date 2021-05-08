@@ -21,6 +21,10 @@
         
         public ChakraCodeDetails Gift { get; set; }
 
+        public ChakraCodeDetails BirthYear { get; set; }
+
+        public ChakraCodeDetails CurrentYear { get; set; }
+
         public bool IsProcessed { get; set; }
         
     }

@@ -18,6 +18,8 @@ namespace K9.WebApplication.Services
             model.SubDominant = CalculateSubDominant(model.PersonModel.DateOfBirth);
             model.Guide = CalculateGuide(model.PersonModel.DateOfBirth);
             model.Gift = CalculateGift(model.PersonModel.DateOfBirth);
+            model.BirthYear = CalculateBirthYear(model.PersonModel);
+            model.CurrentYear = CalculateCurrentYear(model.PersonModel);
 
             model.IsProcessed = true;
 
@@ -68,6 +70,32 @@ namespace K9.WebApplication.Services
                 ChakraCode = (EChakraCode)result,
                 IsActive = IsActive(date, 54, 81),
                 TypeName = "Gift"
+            };
+        }
+
+        public ChakraCodeDetails CalculateBirthYear(PersonModel person)
+        {
+            var result = CalculateDominant(person.DateOfBirth).ChakraCode;
+
+            result = result == EChakraCode.Elder ? EChakraCode.Pioneer : result + 1;
+
+            return new ChakraCodeDetails
+            {
+                ChakraCode = result,
+                TypeName = "CurrentYear"
+            };
+        }
+
+        public ChakraCodeDetails CalculateCurrentYear(PersonModel person)
+        {
+            var result = CalculateBirthYear(person).ChakraCode;
+
+            result = (EChakraCode)(((int)result + person.YearsOld + 1) % 9);
+            
+            return new ChakraCodeDetails
+            {
+                ChakraCode = result,
+                TypeName = "CurrentYear"
             };
         }
 
