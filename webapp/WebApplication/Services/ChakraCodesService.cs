@@ -1,6 +1,7 @@
 ﻿using K9.WebApplication.Enums;
 using K9.WebApplication.Models;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace K9.WebApplication.Services
@@ -20,6 +21,8 @@ namespace K9.WebApplication.Services
             model.Gift = CalculateGift(model.PersonModel.DateOfBirth);
             model.BirthYear = CalculateBirthYear(model.PersonModel);
             model.CurrentYear = CalculateCurrentYear(model.PersonModel);
+            model.CurrentYearMonthCodes = CalculateMonthChakraCodes(model.PersonModel);
+            model.DharmaCodes = CalculateDharmaCodes(model.PersonModel);
 
             model.IsProcessed = true;
 
@@ -91,12 +94,106 @@ namespace K9.WebApplication.Services
             var result = CalculateBirthYear(person).ChakraCode;
 
             result = (EChakraCode)(((int)result + person.YearsOld + 1) % 9);
-            
+
             return new ChakraCodeDetails
             {
                 ChakraCode = result,
                 TypeName = "Current Year"
             };
+        }
+
+        public List<MonthChakraCodeModel> CalculateMonthChakraCodes(PersonModel person)
+        {
+            var items = new List<MonthChakraCodeModel>();
+            var yearEnergy = CalculateCurrentYear(person);
+            var monthEnergy = yearEnergy.ChakraCodeNumber - 6;
+
+            monthEnergy = monthEnergy < 1 ? (9 + monthEnergy) : monthEnergy;
+
+            for (int i = 0; i < 12; i++)
+            {
+                monthEnergy = monthEnergy > 9 ? 1 : monthEnergy;
+
+                items.Add(new MonthChakraCodeModel
+                {
+                    ChakraCode = (EChakraCode)monthEnergy,
+                    MonthNumber = i + 1
+                });
+
+                monthEnergy++;
+            }
+
+            return items;
+        }
+
+        public List<DharmaChakraCodeModel> CalculateDharmaCodes(PersonModel person)
+        {
+            var items = new List<DharmaChakraCodeModel>();
+            var age = 0;
+            var year = person.DateOfBirth.Year;
+            var yearEnergy = CalculateBirthYear(person).ChakraCodeNumber;
+
+            for (int i = 0; i < 100; i++)
+            {
+                age += i;
+                year += i;
+                yearEnergy += i;
+                yearEnergy = yearEnergy > 9 ? 1 : yearEnergy;
+
+                items.Add(new DharmaChakraCodeModel
+                {
+                    Age = age,
+                    Year = year,
+                    ChakraCode = (EChakraCode)yearEnergy
+                });
+            }
+
+            // Get first 9
+            var code = items.First(e => e.ChakraCodeNumber == 9);
+            var dharmaCode = 9;
+            var skip = 1;
+
+            code.DharmaChakraCode = (EChakraCode)dharmaCode;
+            age = code.Age - 1;
+
+            while (age > 0)
+            {
+                code = items.First(e => e.Age == age);
+                code.DharmaChakraCode = (EChakraCode)dharmaCode;
+
+                if (skip >= 1)
+                {
+                    dharmaCode--;
+                    skip = 0;
+
+                    dharmaCode = dharmaCode < 1 ? 9 : dharmaCode;
+                }
+
+                age--;
+                skip++;
+            }
+
+            age = code.Age + 1;
+            skip = 0;
+
+            while (age < 100)
+            {
+                code = items.First(e => e.Age == age);
+                code.DharmaChakraCode = (EChakraCode)dharmaCode;
+
+                if (skip >= 1)
+                {
+                    dharmaCode++;
+                    skip = 0;
+
+                    dharmaCode = dharmaCode > 9 ? 1 : dharmaCode;
+                }
+
+                age++;
+                skip++;
+            }
+
+            return items;
         }
 
         private static int CalculateNumerology(int value)

@@ -1,0 +1,45 @@
+﻿@model K9.WebApplication.Models.ChakraCodesModel
+
+<div class="well">
+    <div class="row">
+        <div class="col-xs-4">
+            <strong>Age</strong>
+        </div>
+        <div class="col-xs-4">
+            <strong>Year</strong>
+        </div>
+        <div class="col-xs-4">
+            <strong>Energy</strong>
+        </div>
+        <div class="col-xs-4">
+            <strong>Dharmic Energy</strong>
+        </div>
+    </div>
+    @{
+        var energy = Model.BirthYear.ChakraCodeNumber;
+
+        for (int i = 0; i < 100; i++)
+        {
+            var year = Model.PersonModel.DateOfBirth.Year + i;
+
+            energy++;
+            energy = energy > 9 ? 1 : energy;
+
+            <div class="row">
+                <div class="col-xs-3">
+                    @i
+                </div>
+                <div class="col-xs-3">
+                    @year
+                </div>
+                <div class="col-xs-3">
+                    @energy
+                </div>
+                <div class="col-xs-3">
+
+                </div>
+            </div>
+        }
+    }
+
+</div>

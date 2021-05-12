@@ -1,4 +1,6 @@
-﻿namespace K9.WebApplication.Models
+﻿using System.Collections.Generic;
+
+namespace K9.WebApplication.Models
 {
     public class ChakraCodesModel
     {
@@ -24,6 +26,10 @@
         public ChakraCodeDetails BirthYear { get; set; }
 
         public ChakraCodeDetails CurrentYear { get; set; }
+
+        public List<MonthChakraCodeModel> CurrentYearMonthCodes { get; set; }
+        
+        public List<DharmaChakraCodeModel> DharmaCodes { get; set; }
 
         public bool IsProcessed { get; set; }
         
