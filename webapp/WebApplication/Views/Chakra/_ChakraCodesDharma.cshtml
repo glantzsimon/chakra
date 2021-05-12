@@ -23,6 +23,13 @@
 
         foreach (var code in Model.DharmaCodes)
         {
+            if (code.DharmaGroupChakraCodeNumber != group)
+            {
+                <br />
+                <hr />
+                group = code.DharmaGroupChakraCodeNumber;
+            }
+
             <div class="row">
                 <div class="col-xs-2">
                     @code.Age
@@ -40,13 +47,6 @@
                     @code.DharmaGroupChakraCodeNumber
                 </div>
             </div>
-
-            if (code.DharmaGroupChakraCodeNumber != group)
-            {
-                <br />
-                <hr />
-                group = code.DharmaGroupChakraCodeNumber;
-            }
         }
     }
 </div>
