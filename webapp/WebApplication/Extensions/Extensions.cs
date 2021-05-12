@@ -39,7 +39,7 @@ namespace K9.WebApplication.Extensions
 
         public static EChakraCode Decrement(this EChakraCode code)
         {
-            return (int)code == 9 ? (EChakraCode)1 : code + 1;
+            return (int)code == 1 ? (EChakraCode)9 : code - 1;
         }
 
         public static int Increment(this int code)
@@ -49,7 +49,7 @@ namespace K9.WebApplication.Extensions
 
         public static int Decrement(this int code)
         {
-            return code == 9 ? 1 : code + 1;
+            return code == 1 ? 9 : code - 1;
         }
     }
 }

@@ -147,11 +147,11 @@ namespace K9.WebApplication.Services
             }
 
             // Get first 9
-            var dharmaCode = 9;
-            var code = items.First(e => e.ChakraCodeNumber == 9);
             var skip = 1;
+            var dharmaCode = 8;
+            var code = items.First(e => e.ChakraCodeNumber == 9);
 
-            code.DharmaChakraCode = code.ChakraCode;
+            code.DharmaChakraCode = code.ChakraCode.Decrement();
             age = code.Age - 1;
 
             while (age >= 0)
@@ -164,11 +164,15 @@ namespace K9.WebApplication.Services
                     dharmaCode = dharmaCode.Decrement();
                     skip = 0;
                 }
+                else
+                {
+                    skip++;
+                }
 
                 age--;
-                skip++;
             }
 
+            code = items.First(e => e.ChakraCodeNumber == 9);
             age = code.Age + 1;
             dharmaCode = 1;
             skip = 0;
@@ -183,9 +187,12 @@ namespace K9.WebApplication.Services
                     dharmaCode = dharmaCode.Increment();
                     skip = 0;
                 }
+                else
+                {
+                    skip++;
+                }
 
                 age++;
-                skip++;
             }
 
             return items;
