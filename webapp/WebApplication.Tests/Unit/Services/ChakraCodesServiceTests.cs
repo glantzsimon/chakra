@@ -35,8 +35,8 @@ namespace K9.WebApplication.Tests.Unit.Services
             Assert.Equal(gift, result.Gift.ChakraCode);
             Assert.Equal(birthYear, result.BirthYear.ChakraCode);
             Assert.Equal(currentYear, result.CurrentYear.ChakraCode);
-            Assert.Equal(birthDharmaCode, result.DharmaCodes.First(e => e.Age == 0).ChakraCode);
-
+            Assert.Equal(birthDharmaCode, result.DharmaCodes.First(e => e.Age == 0).DharmaChakraCode);
+                
             Assert.False(result.Dominant.IsActive);
             Assert.False(result.SubDominant.IsActive);
             Assert.True(result.Guide.IsActive);

@@ -147,12 +147,11 @@ namespace K9.WebApplication.Services
             }
 
             // Get first 9
-            var skip = 1;
+            var skip = 0;
             var dharmaCode = 8;
             var code = items.First(e => e.ChakraCodeNumber == 9);
 
-            code.DharmaChakraCode = code.ChakraCode.Decrement();
-            age = code.Age - 1;
+            age = code.Age;
 
             while (age >= 0)
             {
@@ -174,7 +173,7 @@ namespace K9.WebApplication.Services
 
             code = items.First(e => e.ChakraCodeNumber == 9);
             age = code.Age + 1;
-            dharmaCode = 1;
+            dharmaCode = 9;
             skip = 0;
 
             while (age < 100)
