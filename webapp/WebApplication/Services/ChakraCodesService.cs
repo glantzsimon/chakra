@@ -82,7 +82,7 @@ namespace K9.WebApplication.Services
             return new ChakraCodeDetails
             {
                 ChakraCode = result,
-                TypeName = "CurrentYear"
+                TypeName = "Birth Year"
             };
         }
 
@@ -95,7 +95,7 @@ namespace K9.WebApplication.Services
             return new ChakraCodeDetails
             {
                 ChakraCode = result,
-                TypeName = "CurrentYear"
+                TypeName = "Current Year"
             };
         }
 

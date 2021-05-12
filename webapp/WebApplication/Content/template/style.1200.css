@@ -19,4 +19,23 @@
         padding-right: 3%;
         font-size: 0.9em;
     }
+    
+        .chakra-code-container h3 {
+            font-size: 1em;
+        }
+
+    .chakra-code {
+        width: 70px;
+        height: 70px;
+    }
+
+        .chakra-code p {
+            font-size: 0.8em;
+            font-weight: normal;
+        }
+
+    .Dominant {
+        width: 100px;
+        height: 100px;
+    }
 }

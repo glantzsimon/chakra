@@ -15,6 +15,8 @@ namespace K9.WebApplication.Models
         public string Name => Attributes.Name;
 
         public string Colour => Attributes.Colour;
+        
+        public int ChakraCodeNumber => (int)ChakraCode;
 
         private ChakraCodeEnumMetaDataAttribute Attributes => ChakraCode.GetAttribute<ChakraCodeEnumMetaDataAttribute>();
 

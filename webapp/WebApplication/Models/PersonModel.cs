@@ -22,6 +22,7 @@ namespace K9.WebApplication.Models
         public EGender Gender { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Dictionary), ErrorMessageResourceName = Strings.ErrorMessages.FieldIsRequired)]
+        [Display(ResourceType = typeof(Dictionary), Name = Strings.Labels.BirthDateLabel)]
         public DateTime DateOfBirth { get; set; }
 
         [Display(ResourceType = typeof(Dictionary), Name = Strings.Labels.NameLabel)]

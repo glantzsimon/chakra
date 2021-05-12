@@ -8,6 +8,7 @@
     padding: 10px;
     background-color: white;
     width: 100%;
+    min-height: 300px;
 }
 
     .chakra-code-container h3 {
@@ -27,10 +28,19 @@
     font-size: 1em;
 }
 
-    .chakra-code p {
+    .chakra-code div {
         text-align: center;
         width: 100%;
     }
+
+        .chakra-code div p {
+            margin: 0;
+            padding: 0;
+        }
+
+.chakra-code-number {
+    font-size: 1.1em;
+}
 
 .Dominant {
     font-weight: bold;
