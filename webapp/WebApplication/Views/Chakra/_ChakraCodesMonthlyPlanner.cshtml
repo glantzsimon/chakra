@@ -43,10 +43,11 @@
     <div class="row">
         @{
             var monthEnergy = Model.CurrentYear.ChakraCodeNumber - 6;
+            monthEnergy = monthEnergy < 1 ? (9 + monthEnergy) : monthEnergy;
 
             for (int i = 0; i < 12; i++)
             {
-                monthEnergy = monthEnergy < 1 ? (9 + monthEnergy) : monthEnergy;
+                monthEnergy = monthEnergy > 9 ? 1 : monthEnergy;
 
                 <div class="col-xs-1">
                     @monthEnergy
