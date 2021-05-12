@@ -10,10 +10,18 @@ namespace K9.WebApplication.Models
 
         public EChakraCode ChakraCode { get; set; }
         
+        public EChakraCode DharmaChakraBaseCode { get; set; }
+        
         public EChakraCode DharmaChakraCode { get; set; }
+        
+        public EChakraCode DharmaGroupChakraCode { get; set; }
 
         public int ChakraCodeNumber => (int)ChakraCode;
         
+        public int DharmaChakraBaseCodeNumber => (int)DharmaChakraBaseCode;
+        
         public int DharmaChakraCodeNumber => (int)DharmaChakraCode;
+        
+        public int DharmaGroupChakraCodeNumber => (int)DharmaGroupChakraCode;
     }
 }

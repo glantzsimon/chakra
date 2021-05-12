@@ -12,9 +12,9 @@ namespace K9.WebApplication.Tests.Unit.Services
     public class ChakraCodesServiceTests
     {
         [Theory]
-        [InlineData(1979, 6, 16, EChakraCode.Warrior, EChakraCode.Seer, EChakraCode.Teacher, EChakraCode.Mystic, EChakraCode.Healer, EChakraCode.Pioneer, EChakraCode.Seer)]
-        [InlineData(1984, 6, 21, EChakraCode.Healer, EChakraCode.Seer, EChakraCode.Warrior, EChakraCode.Healer, EChakraCode.Communicator, EChakraCode.Seer, EChakraCode.Seer)]
-        public void CalculateTest(int year, int month, int day, EChakraCode dominant, EChakraCode subdominant, EChakraCode guide, EChakraCode gift, EChakraCode birthYear, EChakraCode currentYear, EChakraCode birthDharmaCode)
+        [InlineData(1979, 6, 16, EChakraCode.Warrior, EChakraCode.Seer, EChakraCode.Teacher, EChakraCode.Mystic, EChakraCode.Healer, EChakraCode.Pioneer, EChakraCode.Teacher, EChakraCode.Healer)]
+        //[InlineData(1984, 6, 21, EChakraCode.Healer, EChakraCode.Seer, EChakraCode.Warrior, EChakraCode.Healer, EChakraCode.Communicator, EChakraCode.Seer, EChakraCode.Seer)]
+        public void CalculateTest(int year, int month, int day, EChakraCode dominant, EChakraCode subdominant, EChakraCode guide, EChakraCode gift, EChakraCode birthYear, EChakraCode currentYear, EChakraCode birthDharmaBaseCode, EChakraCode birthDharmaCode)
         {
             var model = new ChakraCodesModel(new PersonModel
             {
@@ -35,6 +35,7 @@ namespace K9.WebApplication.Tests.Unit.Services
             Assert.Equal(gift, result.Gift.ChakraCode);
             Assert.Equal(birthYear, result.BirthYear.ChakraCode);
             Assert.Equal(currentYear, result.CurrentYear.ChakraCode);
+            Assert.Equal(birthDharmaBaseCode, result.DharmaCodes.First(e => e.Age == 0).DharmaChakraBaseCode);
             Assert.Equal(birthDharmaCode, result.DharmaCodes.First(e => e.Age == 0).DharmaChakraCode);
                 
             Assert.False(result.Dominant.IsActive);

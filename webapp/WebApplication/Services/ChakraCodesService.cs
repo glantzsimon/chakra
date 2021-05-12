@@ -148,7 +148,7 @@ namespace K9.WebApplication.Services
 
             // Get first 9
             var skip = 0;
-            var dharmaCode = 8;
+            var dharmaBaseCode = 9;
             var code = items.First(e => e.ChakraCodeNumber == 9);
 
             age = code.Age;
@@ -156,7 +156,58 @@ namespace K9.WebApplication.Services
             while (age >= 0)
             {
                 code = items.First(e => e.Age == age);
+                code.DharmaChakraBaseCode = (EChakraCode)dharmaBaseCode;
+
+                if (skip >= 1)
+                {
+                    dharmaBaseCode = dharmaBaseCode.Decrement();
+                    skip = 0;
+                }
+                else
+                {
+                    skip++;
+                }
+
+                age--;
+            }
+
+            // Get those after 9 
+            code = items.First(e => e.ChakraCodeNumber == 9);
+            age = code.Age + 1;
+            dharmaBaseCode = 1;
+            skip = 0;
+
+            while (age < 100)
+            {
+                code = items.First(e => e.Age == age);
+                code.DharmaChakraBaseCode = (EChakraCode)dharmaBaseCode;
+
+                if (skip >= 1)
+                {
+                    dharmaBaseCode = dharmaBaseCode.Increment();
+                    skip = 0;
+                }
+                else
+                {
+                    skip++;
+                }
+
+                age++;
+            }
+
+            // Calculate Dharma Codes
+            var birthCode = items.First(e => e.Age == 0);
+            var groupCode = birthCode.DharmaChakraBaseCode.Decrement();
+            var dharmaCode = (int)groupCode;
+
+            code = items.First(e => e.ChakraCodeNumber == 9);
+            age = code.Age;
+
+            while (age >= 0)
+            {
+                code = items.First(e => e.Age == age);
                 code.DharmaChakraCode = (EChakraCode)dharmaCode;
+                code.DharmaGroupChakraCode = groupCode;
 
                 if (skip >= 1)
                 {
@@ -171,27 +222,38 @@ namespace K9.WebApplication.Services
                 age--;
             }
 
+            // Get remaining dharma codes
             code = items.First(e => e.ChakraCodeNumber == 9);
-            age = code.Age + 1;
-            dharmaCode = 9;
-            skip = 0;
-
-            while (age < 100)
+            var y = 1;
+            while (code != null)
             {
-                code = items.First(e => e.Age == age);
-                code.DharmaChakraCode = (EChakraCode)dharmaCode;
+                code = items.First(e => e.ChakraCodeNumber == 9);
+                groupCode = groupCode.Increment();
+                dharmaCode = (int)groupCode;
+                age = code.Age + (18 * y);
+                skip = 0;
 
-                if (skip >= 1)
+                for (int i = 0; i < 18; i++)
                 {
-                    dharmaCode = dharmaCode.Increment();
-                    skip = 0;
-                }
-                else
-                {
-                    skip++;
+                    code = items.FirstOrDefault(e => e.Age == age - i);
+                    if (code != null)
+                    {
+                        code.DharmaChakraCode = (EChakraCode)dharmaCode;
+                        code.DharmaGroupChakraCode = groupCode;
+                    }
+
+                    if (skip >= 1)
+                    {
+                        dharmaCode = dharmaCode.Decrement();
+                        skip = 0;
+                    }
+                    else
+                    {
+                        skip++;
+                    }
                 }
 
-                age++;
+                y++;
             }
 
             return items;
