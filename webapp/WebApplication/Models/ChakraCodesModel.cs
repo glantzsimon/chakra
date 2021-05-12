@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using K9.WebApplication.Enums;
 
 namespace K9.WebApplication.Models
 {
@@ -30,8 +32,10 @@ namespace K9.WebApplication.Models
         public List<MonthChakraCodeModel> CurrentYearMonthCodes { get; set; }
         
         public List<DharmaChakraCodeModel> DharmaCodes { get; set; }
-
-        public bool IsProcessed { get; set; }
         
+        public bool IsProcessed { get; set; }
+
+        public DharmaChakraCodeModel FirstDharmaCode => DharmaCodes.FirstOrDefault();
+
     }
 }

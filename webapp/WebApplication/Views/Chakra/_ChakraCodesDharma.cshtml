@@ -15,21 +15,32 @@
             <strong>Dharmic Chakra Code</strong>
         </div>
     </div>
-    @foreach (var code in Model.DharmaCodes)
-    {
-        <div class="row">
-            <div class="col-xs-3">
-                @code.Age
+    @{
+        var group = Model.FirstDharmaCode.DharmaGroupChakraCodeNumber;
+
+        foreach (var code in Model.DharmaCodes)
+        {
+            <div class="row">
+                <div class="col-xs-3">
+                    @code.Age
+                </div>
+                <div class="col-xs-3">
+                    @code.Year
+                </div>
+                <div class="col-xs-3">
+                    @code.ChakraCodeNumber
+                </div>
+                <div class="col-xs-3">
+                    @code.DharmaChakraBaseCodeNumber / @code.DharmaChakraCodeNumber (Group @code.DharmaGroupChakraCodeNumber)
+                </div>
             </div>
-            <div class="col-xs-3">
-                @code.Year
-            </div>
-            <div class="col-xs-3">
-                @code.ChakraCodeNumber
-            </div>
-            <div class="col-xs-3">
-                @code.DharmaChakraBaseCodeNumber / @code.DharmaChakraCodeNumber (Group @code.DharmaGroupChakraCodeNumber)
-            </div>
-        </div>
+
+            if (code.DharmaGroupChakraCodeNumber != group)
+            {
+                <br />
+                <hr />
+                group = code.DharmaGroupChakraCodeNumber;
+            }
+        }
     }
 </div>
