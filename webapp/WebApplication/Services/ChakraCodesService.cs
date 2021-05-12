@@ -135,9 +135,10 @@ namespace K9.WebApplication.Services
 
             for (int i = 0; i < 100; i++)
             {
-                age += i;
-                year += i;
-                yearEnergy += i;
+                age++;
+                year++;
+                yearEnergy++;
+                
                 yearEnergy = yearEnergy > 9 ? 1 : yearEnergy;
 
                 items.Add(new DharmaChakraCodeModel
