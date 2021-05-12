@@ -1,4 +1,5 @@
 ﻿using System.Text.RegularExpressions;
+using K9.WebApplication.Enums;
 
 namespace K9.WebApplication.Extensions
 {
@@ -29,6 +30,26 @@ namespace K9.WebApplication.Extensions
             }
 
             return value;
+        }
+
+        public static EChakraCode Increment(this EChakraCode code)
+        {
+            return (int)code == 9 ? (EChakraCode)1 : code + 1;
+        }
+
+        public static EChakraCode Decrement(this EChakraCode code)
+        {
+            return (int)code == 9 ? (EChakraCode)1 : code + 1;
+        }
+
+        public static int Increment(this int code)
+        {
+            return code == 9 ? 1 : code + 1;
+        }
+
+        public static int Decrement(this int code)
+        {
+            return code == 9 ? 1 : code + 1;
         }
     }
 }

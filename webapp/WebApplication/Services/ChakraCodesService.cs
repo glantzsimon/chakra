@@ -1,4 +1,5 @@
 ﻿using K9.WebApplication.Enums;
+using K9.WebApplication.Extensions;
 using K9.WebApplication.Models;
 using System;
 using System.Collections.Generic;
@@ -112,15 +113,13 @@ namespace K9.WebApplication.Services
 
             for (int i = 0; i < 12; i++)
             {
-                monthEnergy = monthEnergy > 9 ? 1 : monthEnergy;
-
                 items.Add(new MonthChakraCodeModel
                 {
                     ChakraCode = (EChakraCode)monthEnergy,
                     MonthNumber = i + 1
                 });
 
-                monthEnergy++;
+                monthEnergy = monthEnergy.Increment();
             }
 
             return items;
@@ -135,39 +134,35 @@ namespace K9.WebApplication.Services
 
             for (int i = 0; i < 100; i++)
             {
-                age++;
-                year++;
-                yearEnergy++;
-                
-                yearEnergy = yearEnergy > 9 ? 1 : yearEnergy;
-
                 items.Add(new DharmaChakraCodeModel
                 {
                     Age = age,
                     Year = year,
                     ChakraCode = (EChakraCode)yearEnergy
                 });
+
+                age++;
+                year++;
+                yearEnergy = yearEnergy.Increment();
             }
 
             // Get first 9
-            var code = items.First(e => e.ChakraCodeNumber == 9);
             var dharmaCode = 9;
+            var code = items.First(e => e.ChakraCodeNumber == 9);
             var skip = 1;
 
-            code.DharmaChakraCode = (EChakraCode)dharmaCode;
+            code.DharmaChakraCode = code.ChakraCode;
             age = code.Age - 1;
 
-            while (age > 0)
+            while (age >= 0)
             {
                 code = items.First(e => e.Age == age);
                 code.DharmaChakraCode = (EChakraCode)dharmaCode;
 
                 if (skip >= 1)
                 {
-                    dharmaCode--;
+                    dharmaCode = dharmaCode.Decrement();
                     skip = 0;
-
-                    dharmaCode = dharmaCode < 1 ? 9 : dharmaCode;
                 }
 
                 age--;
@@ -175,6 +170,7 @@ namespace K9.WebApplication.Services
             }
 
             age = code.Age + 1;
+            dharmaCode = 1;
             skip = 0;
 
             while (age < 100)
@@ -184,10 +180,8 @@ namespace K9.WebApplication.Services
 
                 if (skip >= 1)
                 {
-                    dharmaCode++;
+                    dharmaCode = dharmaCode.Increment();
                     skip = 0;
-
-                    dharmaCode = dharmaCode > 9 ? 1 : dharmaCode;
                 }
 
                 age++;

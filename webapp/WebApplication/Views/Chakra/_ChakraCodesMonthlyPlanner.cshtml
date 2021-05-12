@@ -42,11 +42,10 @@
     </div>
     <div class="row">
         @foreach (var code in Model.CurrentYearMonthCodes)
-            {
-                <div class="col-xs-1">
-                    @code.ChakraCode
-                </div>
-            }
+        {
+            <div class="col-xs-1">
+                @code.ChakraCodeNumber
+            </div>
         }
     </div>
 </div>
