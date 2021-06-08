@@ -5,7 +5,6 @@
     var typeClass = Model.TypeName.RemoveSpaces();
 }
 
-<div class="chakra-code-container @typeClass-container">
-    <h3>@(Model?.TypeName)</h3>
-    <img src="~/Images/chakracodes/@($"{Model.Name}.png")"/>
+<div class="chakra-code-container small @typeClass-container">
+    <img src="~/Images/chakracodes/@($"{Model.Name}.png")" />
 </div>

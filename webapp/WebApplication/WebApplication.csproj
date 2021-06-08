@@ -419,7 +419,16 @@
     <Content Include="Content\_colors.txt" />
     <Content Include="Global.asax" />
     <Content Include="Images\background\stars.jpg" />
+    <Content Include="Images\chakracodes\Akashic.png" />
     <Content Include="Images\chakracodes\chakra-person.jpg" />
+    <Content Include="Images\chakracodes\Elder.png" />
+    <Content Include="Images\chakracodes\Healer.png" />
+    <Content Include="Images\chakracodes\Manifestor.png" />
+    <Content Include="Images\chakracodes\Mystic.png" />
+    <Content Include="Images\chakracodes\Peacemaker.png" />
+    <Content Include="Images\chakracodes\Pioneer.png" />
+    <Content Include="Images\chakracodes\Royal.png" />
+    <Content Include="Images\chakracodes\Warrior.png" />
     <Content Include="Images\company\logo-med.png" />
     <Content Include="Images\company\logo-small.png" />
     <Content Include="Images\company\logo.png" />
@@ -523,6 +532,15 @@
     <Content Include="Content\fonts\fa-solid-900.ttf" />
     <Content Include="Content\fonts\fa-solid-900.woff" />
     <Content Include="Content\fonts\fa-solid-900.woff2" />
+    <Content Include="Content\fonts\Hello Paris Sans Bold.otf" />
+    <Content Include="Content\fonts\Hello Paris Sans Extra Light.otf" />
+    <Content Include="Content\fonts\Hello Paris Sans Light.otf" />
+    <Content Include="Content\fonts\Hello Paris Sans Medium.otf" />
+    <Content Include="Content\fonts\Hello Paris Sans Regular.otf" />
+    <Content Include="Content\fonts\Optima Medium.ttf" />
+    <Content Include="Content\fonts\OPTIMA.TTF" />
+    <Content Include="Content\fonts\OPTIMA_B.TTF" />
+    <Content Include="Content\fonts\Optima_Italic.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\Integration.pubxml" />
     <None Include="Properties\PublishProfiles\IntegrationLocal.pubxml" />
@@ -633,6 +651,7 @@
     <Content Include="Views\Chakra\_ChakraCodesYearlyPlanner.cshtml" />
     <Content Include="Views\Chakra\_ChakraCodesMonthlyPlanner.cshtml" />
     <Content Include="Views\Chakra\_ChakraCodesYearlyPlannerDetails.cshtml" />
+    <Content Include="Views\Chakra\_ChakraCodeSmall.cshtml" />
     <None Include="Web.Integration.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -5,7 +5,7 @@
 .chakra-code-container {
     border: 1px solid #eee;
     border-radius: 5px;
-    padding: 10px;
+    padding: 2px;
     background-color: white;
     width: 100%;
     min-height: 300px;
@@ -15,17 +15,10 @@
         text-align: center;
     }
 
-.chakra-code {
-    width: 150px;
-    height: 150px;
-    border: 2px solid black;
-    border-radius: 100px;
-    margin: auto;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1em;
+.chakra-code-container img {
+    width: 100%;
+    height: auto;
+    padding: 20px;
 }
 
     .chakra-code div {
@@ -37,6 +30,15 @@
             margin: 0;
             padding: 0;
         }
+
+.chakra-code-container.small .chakra-code {
+    width: 100%;
+    height: auto;
+}
+
+.month-chakra-code-container {
+    padding: 2px;
+}
 
 .chakra-code-number {
     font-size: 1.1em;
@@ -96,4 +98,3 @@
     -moz-box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
 }
-

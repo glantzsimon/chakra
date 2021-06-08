@@ -44,8 +44,8 @@
     <div class="row">
         @foreach (var code in Model.CurrentYearMonthCodes)
         {
-            <div class="col-xs-1 @code.IsCurrentCssClass">
-                <p>@Html.Partial("_ChakraCode", new ChakraCodeDetails
+            <div class="col-xs-1 month-chakra-code-container @code.IsCurrentCssClass">
+                <p>@Html.Partial("_ChakraCodeSmall", new ChakraCodeDetails
                    {
                        ChakraCode = code.ChakraCode,
                        TypeName = ""

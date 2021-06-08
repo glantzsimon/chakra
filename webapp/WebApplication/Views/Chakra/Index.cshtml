@@ -16,10 +16,13 @@
             </div>
 
             <div class="row">
-                <div class="col-md-2 col-sm-12 padding-0">
+                <div class="col-md-2 col-md-offset-5 col-sm-12 padding-0">
                     @Html.Partial("_Calculator")
                 </div>
-                <div class="col-md-10 col-sm-12 padding-left-20-desktop padding-right-0">
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12 padding-right-0">
                     @if (Model?.IsProcessed == true)
                     {
                         @Html.Partial("_ChakraCodesMain")
@@ -29,6 +32,7 @@
                         @Html.Partial("_ChakraCodesYearlyPlanner")
                     }
                 </div>
+            </div>
         </article>
     </div>
 </div>
