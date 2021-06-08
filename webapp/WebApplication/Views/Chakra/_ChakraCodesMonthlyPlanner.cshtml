@@ -1,4 +1,5 @@
 ﻿@using K9.WebApplication.Enums
+@using K9.WebApplication.Models
 @model K9.WebApplication.Models.ChakraCodesModel
 
 <div class="well">
@@ -43,8 +44,13 @@
     <div class="row">
         @foreach (var code in Model.CurrentYearMonthCodes)
         {
-            <div class="col-xs-1">
-                @code.ChakraCodeNumber
+            <div class="col-xs-1 @code.IsCurrentCssClass">
+                <p>@Html.Partial("_ChakraCode", new ChakraCodeDetails
+                   {
+                       ChakraCode = code.ChakraCode,
+                       TypeName = ""
+                   })</p>
+                <p>@code.StartDate.ToShortDateString() - @code.EndDate.ToShortDateString()</p>
             </div>
         }
     </div>

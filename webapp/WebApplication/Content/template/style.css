@@ -10,6 +10,21 @@
     url('../fonts/alex-brush-v8-latin-regular.svg#AlexBrush') format('svg'); /* Legacy iOS */
 }
 
+@font-face {
+    font-family: 'Hello Paris Sans Medium';
+    src: url('../fonts/Hello Paris Sans Medium.otf');
+}
+
+@font-face {
+    font-family: 'Optima Regular';
+    src: url('../fonts/optima.ttf');
+}
+
+@font-face {
+    font-family: 'Optima Bold';
+    src: url('../fonts/optima_b.ttf');
+}
+
 body a, h4 {
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
@@ -20,7 +35,7 @@ body a, h4 {
 
 html, body {
     font-size: 100%;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Optima Regular', 'Montserrat', sans-serif;
 }
 
 body {

@@ -12,7 +12,7 @@ namespace K9.WebApplication.Tests.Unit.Services
     public class ChakraCodesServiceTests
     {
         [Theory]
-        [InlineData(1979, 6, 16, EChakraCode.Warrior, EChakraCode.Seer, EChakraCode.Teacher, EChakraCode.Mystic, EChakraCode.Healer, EChakraCode.Pioneer, EChakraCode.Teacher, EChakraCode.Healer)]
+        [InlineData(1979, 6, 16, EChakraCode.Warrior, EChakraCode.Manifestor, EChakraCode.Royal, EChakraCode.Mystic, EChakraCode.Healer, EChakraCode.Pioneer, EChakraCode.Royal, EChakraCode.Healer)]
         //[InlineData(1984, 6, 21, EChakraCode.Healer, EChakraCode.Seer, EChakraCode.Warrior, EChakraCode.Healer, EChakraCode.Communicator, EChakraCode.Seer, EChakraCode.Seer)]
         public void CalculateTest(int year, int month, int day, EChakraCode dominant, EChakraCode subdominant, EChakraCode guide, EChakraCode gift, EChakraCode birthYear, EChakraCode currentYear, EChakraCode birthDharmaBaseCode, EChakraCode birthDharmaCode)
         {

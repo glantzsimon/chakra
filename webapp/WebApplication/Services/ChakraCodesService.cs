@@ -94,7 +94,12 @@ namespace K9.WebApplication.Services
         {
             var result = CalculateBirthYear(person).ChakraCode;
 
-            result = (EChakraCode)(((int)result + person.YearsOld + 1) % 9);
+            result = (EChakraCode)(((int)result + person.YearsOld) % 9);
+
+            if (result == 0)
+            {
+                result++;
+            }
 
             return new ChakraCodeDetails
             {
@@ -113,10 +118,14 @@ namespace K9.WebApplication.Services
 
             for (int i = 0; i < 12; i++)
             {
+                var monthNumber = i + 1;
+
                 items.Add(new MonthChakraCodeModel
                 {
                     ChakraCode = (EChakraCode)monthEnergy,
-                    MonthNumber = i + 1
+                    MonthNumber = monthNumber,
+                    StartDate = GetStartDate((EChakraCode)monthEnergy, monthNumber),
+                    EndDate = GetEndDate((EChakraCode)monthEnergy, monthNumber)
                 });
 
                 monthEnergy = monthEnergy.Increment();
@@ -257,6 +266,68 @@ namespace K9.WebApplication.Services
             }
 
             return items;
+        }
+
+        private DateTime GetStartDate(EChakraCode energy, int month)
+        {
+            var firstOfMonth = new DateTime(DateTime.Now.Year, month, 1);
+            var previousMonth = firstOfMonth.AddMonths(-1);
+
+            switch (energy)
+            {
+                case EChakraCode.Pioneer:
+                case EChakraCode.Akashic:
+                    return new DateTime(previousMonth.Year, previousMonth.Month, 27);
+
+                case EChakraCode.Peacemaker:
+                case EChakraCode.Manifestor:
+                case EChakraCode.Royal:
+                case EChakraCode.Elder:
+                    return new DateTime(previousMonth.Year, previousMonth.Month, 28).AddDays(1);
+
+                case EChakraCode.Warrior:
+                    return new DateTime(previousMonth.Year, previousMonth.Month, 23);
+
+                case EChakraCode.Healer:
+                    return new DateTime(previousMonth.Year, previousMonth.Month, 17);
+
+                case EChakraCode.Mystic:
+                    return new DateTime(previousMonth.Year, previousMonth.Month, 18);
+
+                default:
+                    return firstOfMonth;
+            }
+        }
+
+        private DateTime GetEndDate(EChakraCode energy, int month)
+        {
+            var firstOfMonth = new DateTime(DateTime.Now.Year, month, 1);
+            var previousMonth = firstOfMonth.AddMonths(-1);
+
+            switch (energy)
+            {
+                case EChakraCode.Pioneer:
+                case EChakraCode.Akashic:
+                case EChakraCode.Manifestor:
+                case EChakraCode.Mystic:
+                    return new DateTime(firstOfMonth.Year, firstOfMonth.Month, 28).AddDays(1);
+
+                case EChakraCode.Peacemaker:
+                    return new DateTime(firstOfMonth.Year, firstOfMonth.Month, 23);
+
+                case EChakraCode.Warrior:
+                    return new DateTime(firstOfMonth.Year, firstOfMonth.Month, 17);
+
+                case EChakraCode.Healer:
+                case EChakraCode.Elder:
+                    return new DateTime(firstOfMonth.Year, firstOfMonth.Month, 27);
+
+                case EChakraCode.Royal:
+                    return new DateTime(firstOfMonth.Year, firstOfMonth.Month, 18);
+
+                default:
+                    return firstOfMonth;
+            }
         }
 
         private static int CalculateNumerology(int value)

@@ -9,47 +9,47 @@ namespace K9.WebApplication.Enums
         [ChakraCodeEnumMetaData(ResourceType = typeof(Dictionary),
             Name = "Pioneer",
             Description = "Pioneer",
-            Colour = "Red")]
+            Colour = "#833135")]
         Pioneer,
         [ChakraCodeEnumMetaData(ResourceType = typeof(Dictionary),
-            Name = "Creative",
-            Description = "Creative",
-            Colour = "Orange")]
-        Creative,
+            Name = "Peacemaker",
+            Description = "Peacemaker",
+            Colour = "#d68258")]
+        Peacemaker,
         [ChakraCodeEnumMetaData(ResourceType = typeof(Dictionary),
             Name = "Warrior",
             Description = "Warrior",
-            Colour = "Yellow")]
+            Colour = "#e3c570")]
         Warrior,
         [ChakraCodeEnumMetaData(ResourceType = typeof(Dictionary),
             Name = "Healer",
             Description = "Heart / Healer",
-            Colour = "Green")]
+            Colour = "#496553")]
         Healer,
         [ChakraCodeEnumMetaData(ResourceType = typeof(Dictionary),
-            Name = "Communicator",
-            Description = "Communicator / Expression",
-            Colour = "Blue")]
-        Communicator,
+            Name = "Akashic",
+            Description = "Akashic Generator",
+            Colour = "#1e506d")]
+        Akashic,
         [ChakraCodeEnumMetaData(ResourceType = typeof(Dictionary),
-            Name = "Seer",
-            Description = "Seer",
-            Colour = "Purple")]
-        Seer,
+            Name = "Manifestor",
+            Description = "Manifestor",
+            Colour = "#4a4d69")]
+        Manifestor,
         [ChakraCodeEnumMetaData(ResourceType = typeof(Dictionary),
-            Name = "Teacher",
-            Description = "Teacher",
-            Colour = "Silver")]
-        Teacher,
+            Name = "Royal",
+            Description = "Royal",
+            Colour = "#f2e9e4")]
+        Royal,
         [ChakraCodeEnumMetaData(ResourceType = typeof(Dictionary),
             Name = "Mystic",
             Description = "Mystic",
-            Colour = "Gold")]
+            Colour = "#c6a671")]
         Mystic,
         [ChakraCodeEnumMetaData(ResourceType = typeof(Dictionary),
             Name = "Elder",
             Description = "Elder / Source",
-            Colour = "White")]
+            Colour = "#e5e5e5")]
         Elder
     }
 

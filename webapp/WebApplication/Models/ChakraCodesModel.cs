@@ -35,6 +35,14 @@ namespace K9.WebApplication.Models
         
         public bool IsProcessed { get; set; }
 
+        public List<DharmaChakraCodeModel> DharmaCodesFoundation => DharmaCodes.Where(e => e.Age < 27).ToList();
+        
+        public List<DharmaChakraCodeModel> DharmaCodesContribution => DharmaCodes.Where(e => e.Age >= 27 && e.Age < 54).ToList();
+        
+        public List<DharmaChakraCodeModel> DharmaCodesAscension => DharmaCodes.Where(e => e.Age >= 54 && e.Age < 81).ToList();
+        
+        public List<DharmaChakraCodeModel> DharmaCodesElders => DharmaCodes.Where(e => e.Age >= 81 && e.Age < 108).ToList();
+
         public DharmaChakraCodeModel FirstDharmaCode => DharmaCodes.FirstOrDefault();
 
     }

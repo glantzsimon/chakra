@@ -86,3 +86,14 @@
         .timeline .active span {
             font-weight: bold;
         }
+
+.current {
+    background: white;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+}
+
