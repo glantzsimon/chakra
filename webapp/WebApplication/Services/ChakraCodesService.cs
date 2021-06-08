@@ -22,8 +22,12 @@ namespace K9.WebApplication.Services
             model.Gift = CalculateGift(model.PersonModel.DateOfBirth);
             model.BirthYear = CalculateBirthYear(model.PersonModel);
             model.CurrentYear = CalculateCurrentYear(model.PersonModel);
+            model.CurrentMonth = CalculateCurrentMonth(model.PersonModel);
             model.CurrentYearMonthCodes = CalculateMonthChakraCodes(model.PersonModel);
             model.DharmaCodes = CalculateDharmaCodes(model.PersonModel);
+            model.YearlyForecast = GetYearlyForecast(model.PersonModel);
+            model.MonthlyForecast = GetMonthlyForecast(model.PersonModel);
+            model.DailyForecast = GetDailyForecast(model.PersonModel);
 
             model.IsProcessed = true;
 
@@ -114,6 +118,18 @@ namespace K9.WebApplication.Services
                 StartDate = GetYearStartDate(result),
                 EndDate = GetYearEndDate(result),
                 ShowDates = true
+            };
+        }
+
+        public ChakraCodeDetails CalculateCurrentMonth(PersonModel person)
+        {
+            var activeMonth = CalculateMonthChakraCodes(person).FirstOrDefault(e => e.IsCurrent);
+            return activeMonth == null ? null : new ChakraCodeDetails
+            {
+                ChakraCode = activeMonth.ChakraCode,
+                TypeName = "Current Month",
+                StartDate = activeMonth.StartDate,
+                EndDate = activeMonth.EndDate
             };
         }
 
@@ -277,6 +293,46 @@ namespace K9.WebApplication.Services
             return items;
         }
 
+        public ChakraCodeForecast GetYearlyForecast(PersonModel person)
+        {
+            var dominant = CalculateDominant(person.DateOfBirth);
+            var yearEnergy = CalculateCurrentYear(person);
+            var x = CalculateNumerology(dominant.ChakraCodeNumber + yearEnergy.ChakraCodeNumber);
+
+            return new ChakraCodeForecast
+            {
+                ChartCode = dominant.ChakraCode,
+                TopNumber = yearEnergy.ChakraCodeNumber,
+                BottomNumber = x
+            };
+        }
+
+        public ChakraCodeForecast GetMonthlyForecast(PersonModel person)
+        {
+            var yearEnergy = CalculateCurrentYear(person);
+            var monthEnergy = CalculateCurrentMonth(person);
+            var x = CalculateNumerology(yearEnergy.ChakraCodeNumber + monthEnergy.ChakraCodeNumber);
+            
+            return new ChakraCodeForecast
+            {
+                ChartCode = yearEnergy.ChakraCode,
+                TopNumber = monthEnergy.ChakraCodeNumber,
+                BottomNumber = x
+            };
+        }
+
+        public ChakraCodeForecast GetDailyForecast(PersonModel person)
+        {
+            var monthEnergy = CalculateCurrentMonth(person);
+            var x = CalculateNumerology(monthEnergy.ChakraCodeNumber + DateTime.Today.Day);
+            
+            return new ChakraCodeForecast
+            {
+                ChartCode = monthEnergy.ChakraCode,
+                RowNumber = x
+            };
+        }
+
         private DateTime GetMonthStartDate(EChakraCode energy, int month)
         {
             var firstOfMonth = new DateTime(DateTime.Now.Year, month, 1);
@@ -364,7 +420,7 @@ namespace K9.WebApplication.Services
 
                 case EChakraCode.Mystic:
                     return new DateTime(previousYear.Year, 07, 22);
-                
+
                 default:
                     return firstOfYear;
             }
@@ -373,10 +429,10 @@ namespace K9.WebApplication.Services
         private DateTime GetYearEndDate(EChakraCode energy)
         {
             var firstOfYear = new DateTime(DateTime.Now.Year, 1, 1);
-            
+
             switch (energy)
             {
-                
+
                 case EChakraCode.Pioneer:
                 case EChakraCode.Akashic:
                 case EChakraCode.Manifestor:
@@ -395,7 +451,7 @@ namespace K9.WebApplication.Services
                 case EChakraCode.Healer:
                 case EChakraCode.Elder:
                     return new DateTime(firstOfYear.Year, 11, 15);
-                
+
                 default:
                     return firstOfYear;
             }

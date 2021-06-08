@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using K9.WebApplication.Enums;
 
 namespace K9.WebApplication.Models
 {
@@ -28,11 +27,19 @@ namespace K9.WebApplication.Models
         public ChakraCodeDetails BirthYear { get; set; }
 
         public ChakraCodeDetails CurrentYear { get; set; }
+        
+        public ChakraCodeDetails CurrentMonth { get; set; }
 
         public List<MonthChakraCodeModel> CurrentYearMonthCodes { get; set; }
         
         public List<DharmaChakraCodeModel> DharmaCodes { get; set; }
+
+        public ChakraCodeForecast YearlyForecast { get; set; }
         
+        public ChakraCodeForecast MonthlyForecast { get; set; }
+        
+        public ChakraCodeForecast DailyForecast { get; set; }
+
         public bool IsProcessed { get; set; }
 
         public List<DharmaChakraCodeModel> DharmaCodesFoundation => DharmaCodes.Where(e => e.Age < 27).ToList();

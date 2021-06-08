@@ -344,6 +344,7 @@
     <Compile Include="Helpers\HtmlHelpers.cs" />
     <Compile Include="Helpers\SessionHelpers.cs" />
     <Compile Include="Helpers\Separator.cs" />
+    <Compile Include="Models\ChakraCodeForecast.cs" />
     <Compile Include="Models\ChakraCodesModel.cs" />
     <Compile Include="Models\ChakraCodeDetails.cs" />
     <Compile Include="Models\DharmaChakraCode.cs" />
