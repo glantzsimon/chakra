@@ -101,10 +101,18 @@ namespace K9.WebApplication.Services
                 result++;
             }
 
+            var yearEndDate = GetYearEndDate(result);
+            if (yearEndDate < DateTime.Today)
+            {
+                result = result.Increment();
+            }
+
             return new ChakraCodeDetails
             {
                 ChakraCode = result,
-                TypeName = "Current Year"
+                TypeName = "Current Year",
+                StartDate = GetYearStartDate(result),
+                EndDate = GetYearEndDate(result)
             };
         }
 
@@ -124,8 +132,8 @@ namespace K9.WebApplication.Services
                 {
                     ChakraCode = (EChakraCode)monthEnergy,
                     MonthNumber = monthNumber,
-                    StartDate = GetStartDate((EChakraCode)monthEnergy, monthNumber),
-                    EndDate = GetEndDate((EChakraCode)monthEnergy, monthNumber)
+                    StartDate = GetMonthStartDate((EChakraCode)monthEnergy, monthNumber),
+                    EndDate = GetMonthEndDate((EChakraCode)monthEnergy, monthNumber)
                 });
 
                 monthEnergy = monthEnergy.Increment();
@@ -268,7 +276,7 @@ namespace K9.WebApplication.Services
             return items;
         }
 
-        private DateTime GetStartDate(EChakraCode energy, int month)
+        private DateTime GetMonthStartDate(EChakraCode energy, int month)
         {
             var firstOfMonth = new DateTime(DateTime.Now.Year, month, 1);
             var previousMonth = firstOfMonth.AddMonths(-1);
@@ -299,7 +307,7 @@ namespace K9.WebApplication.Services
             }
         }
 
-        private DateTime GetEndDate(EChakraCode energy, int month)
+        private DateTime GetMonthEndDate(EChakraCode energy, int month)
         {
             var firstOfMonth = new DateTime(DateTime.Now.Year, month, 1);
             var previousMonth = firstOfMonth.AddMonths(-1);
@@ -327,6 +335,69 @@ namespace K9.WebApplication.Services
 
                 default:
                     return firstOfMonth;
+            }
+        }
+
+        private DateTime GetYearStartDate(EChakraCode energy)
+        {
+            var firstOfYear = new DateTime(DateTime.Now.Year, 1, 1);
+            var previousYear = firstOfYear.AddYears(-1);
+
+            switch (energy)
+            {
+                case EChakraCode.Pioneer:
+                case EChakraCode.Akashic:
+                    return new DateTime(previousYear.Year, 11, 15);
+
+                case EChakraCode.Peacemaker:
+                case EChakraCode.Manifestor:
+                case EChakraCode.Royal:
+                case EChakraCode.Elder:
+                    return new DateTime(previousYear.Year, 12, 15);
+
+                case EChakraCode.Warrior:
+                    return new DateTime(previousYear.Year, 10, 1);
+
+                case EChakraCode.Healer:
+                    return new DateTime(previousYear.Year, 07, 18);
+
+                case EChakraCode.Mystic:
+                    return new DateTime(previousYear.Year, 07, 22);
+                
+                default:
+                    return firstOfYear;
+            }
+        }
+
+        private DateTime GetYearEndDate(EChakraCode energy)
+        {
+            var firstOfYear = new DateTime(DateTime.Now.Year, 1, 1);
+            var previousYear = firstOfYear.AddYears(-1);
+
+            switch (energy)
+            {
+                
+                case EChakraCode.Pioneer:
+                case EChakraCode.Akashic:
+                case EChakraCode.Manifestor:
+                case EChakraCode.Mystic:
+                    return new DateTime(previousYear.Year, 12, 15);
+
+                case EChakraCode.Peacemaker:
+                    return new DateTime(previousYear.Year, 10, 1);
+
+                case EChakraCode.Warrior:
+                    return new DateTime(previousYear.Year, 07, 18);
+
+                case EChakraCode.Royal:
+                    return new DateTime(previousYear.Year, 07, 22);
+
+                case EChakraCode.Healer:
+                case EChakraCode.Elder:
+                    return new DateTime(previousYear.Year, 11, 15);
+                
+                default:
+                    return firstOfYear;
             }
         }
 

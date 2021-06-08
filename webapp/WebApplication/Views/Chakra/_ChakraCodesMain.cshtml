@@ -15,24 +15,22 @@
             <div class="col-xs-4 padding-2">
                 @Html.Partial("_ChakraCode", Model.Gift)
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-4"></div>
-        <div class="col-xs-8">
-            @Html.Partial("_ChakraCodesTimeline", Model)
-        </div>
-    </div>
-    <br />
-    <div class="row">
-        <div class="col-xs-4">
-        </div>
-        <div class="col-xs-8">
-            <div class="col-xs-4">
-                @Html.Partial("_ChakraCode", Model.CurrentYear)
-            </div>
-            <div class="col-xs-4">
+            <div class="col-xs-12">
+                @Html.Partial("_ChakraCodesTimeline", Model)
             </div>
         </div>
+
+        <br />
+        <div class="row">
+            <div class="col-xs-4">
+            </div>
+            <div class="col-xs-8">
+                <div class="col-xs-4">
+                    @Html.Partial("_ChakraCode", Model.CurrentYear)
+                    <p>@Model.CurrentYear.StartDate.ToShortDateString() - @Model.CurrentYear.EndDate.ToShortDateString()</p>
+                </div>
+                <div class="col-xs-4">
+                </div>
+            </div>
+        </div>
     </div>
-</div>
