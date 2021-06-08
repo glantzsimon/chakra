@@ -1,15 +1,7 @@
 @media(max-width:1540px) {
-    .chakra-code-container {
-        height: 200px;
-    }
 
-    .chakra-code-container h3{
+    .chakra-code-container h3 {
         font-size: 1.1em;
-    }
-
-    .chakra-code {
-        width: 100px;
-        height: 100px;
     }
 
     .Dominant {

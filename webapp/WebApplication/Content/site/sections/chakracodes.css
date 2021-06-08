@@ -8,7 +8,6 @@
     padding: 2px;
     background-color: white;
     width: 100%;
-    min-height: 300px;
 }
 
     .chakra-code-container h3 {
@@ -38,6 +37,7 @@
 
 .month-chakra-code-container {
     padding: 2px;
+    text-align: center;
 }
 
 .chakra-code-number {
