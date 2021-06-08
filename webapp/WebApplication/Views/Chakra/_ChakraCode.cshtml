@@ -7,5 +7,9 @@
 
 <div class="chakra-code-container @typeClass-container">
     <h3>@(Model?.TypeName)</h3>
-    <img src="~/Images/chakracodes/@($"{Model.Name}.png")"/>
+    <img src="~/Images/chakracodes/@($"{Model.Name}.png")" />
+    @if (Model.ShowDates)
+    {
+        <p class="text-center">@Model.StartDate.ToShortDateString() - @Model.EndDate.ToShortDateString()</p>
+    }
 </div>

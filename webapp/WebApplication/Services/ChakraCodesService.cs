@@ -112,7 +112,8 @@ namespace K9.WebApplication.Services
                 ChakraCode = result,
                 TypeName = "Current Year",
                 StartDate = GetYearStartDate(result),
-                EndDate = GetYearEndDate(result)
+                EndDate = GetYearEndDate(result),
+                ShowDates = true
             };
         }
 
@@ -372,8 +373,7 @@ namespace K9.WebApplication.Services
         private DateTime GetYearEndDate(EChakraCode energy)
         {
             var firstOfYear = new DateTime(DateTime.Now.Year, 1, 1);
-            var previousYear = firstOfYear.AddYears(-1);
-
+            
             switch (energy)
             {
                 
@@ -381,20 +381,20 @@ namespace K9.WebApplication.Services
                 case EChakraCode.Akashic:
                 case EChakraCode.Manifestor:
                 case EChakraCode.Mystic:
-                    return new DateTime(previousYear.Year, 12, 15);
+                    return new DateTime(firstOfYear.Year, 12, 15);
 
                 case EChakraCode.Peacemaker:
-                    return new DateTime(previousYear.Year, 10, 1);
+                    return new DateTime(firstOfYear.Year, 10, 1);
 
                 case EChakraCode.Warrior:
-                    return new DateTime(previousYear.Year, 07, 18);
+                    return new DateTime(firstOfYear.Year, 07, 18);
 
                 case EChakraCode.Royal:
-                    return new DateTime(previousYear.Year, 07, 22);
+                    return new DateTime(firstOfYear.Year, 07, 22);
 
                 case EChakraCode.Healer:
                 case EChakraCode.Elder:
-                    return new DateTime(previousYear.Year, 11, 15);
+                    return new DateTime(firstOfYear.Year, 11, 15);
                 
                 default:
                     return firstOfYear;

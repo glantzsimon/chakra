@@ -18,6 +18,8 @@ namespace K9.WebApplication.Models
         
         public DateTime EndDate { get; set; }
 
+        public bool ShowDates { get; set; }
+
         public bool IsCurrent => DateTime.Now.IsBetween(StartDate, EndDate);
 
         public string IsCurrentCssClass => IsCurrent ? "current" : "";
