@@ -61,6 +61,15 @@ namespace K9.Globalisation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to They are freedom loving, fearless and have a desire to express, especially through the voice or writing. They are here to express. Without their voice no one would ever hear the demand for change. They do well in communications/media, marketing and public speaking..
+        /// </summary>
+        public static string akashic {
+            get {
+                return ResourceManager.GetString("akashic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Calculate.
         /// </summary>
         public static string Calculate {
@@ -75,6 +84,85 @@ namespace K9.Globalisation {
         public static string ChakraCodes {
             get {
                 return ResourceManager.GetString("ChakraCodes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spiritually inclined they emanate universal love and understanding with sincerity. They are intuitive and always been wiser than their years. They are here to anchor in the pursuit of human evolution even when all seems lost. They can be happy serving coffee as the barista at a mom and pop cafe or pursuing humanitarian causes and entrepreneurial endeavors.
+        ///.
+        /// </summary>
+        public static string elder {
+            get {
+                return ResourceManager.GetString("elder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to They are extremely intuitive, hyper sensitive, emotional and compassionate with a practical and introspective nature. They will assist in our healing, both on a personal and collective level, and help us to transcend into love and light. They often find themselves in the healing arts, working in non-profits or in human resources.
+        ///.
+        /// </summary>
+        public static string healer {
+            get {
+                return ResourceManager.GetString("healer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calm of mind, visionary, studious and intellectually curious they are inventive and have an ability to see the whole picture. They have come here to harness the quantum energy of the mind and utilize this to manifest and anchor in a new and exciting future. They do well in tech, design and engineering.
+        ///.
+        /// </summary>
+        public static string manifestor {
+            get {
+                return ResourceManager.GetString("manifestor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spiritually inclined especially with the unknowns, they are like the robin hoods of the world. They like to push buttons and take risks in the name of challenging ‘the system’. They have come here to reveal what is hidden behind the veil and bridge the tangible with the mystical realms. Because luck is on their side they do well with financials and investments especially in underground currency.
+        ///.
+        /// </summary>
+        public static string mystic {
+            get {
+                return ResourceManager.GetString("mystic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to They are easy-going, adaptable, sensitive and incredibly creative. They bring together and harmonize people with different views. They are vital for nurturing a positive and loving community. They often find themselves in creative environments, in event coordination or cultivating work culture..
+        /// </summary>
+        public static string peacemaker {
+            get {
+                return ResourceManager.GetString("peacemaker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to They are grounded, original, independent and have a strong sense of their individuality. They are here to pioneer a new way of life by creating strong foundations and roots. They often find themselves as business owners, working with their hands or in a career that is highly purpose driven.
+        ///.
+        /// </summary>
+        public static string pioneer {
+            get {
+                return ResourceManager.GetString("pioneer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spiritually inclined, refined, meditative and regal they value education and enjoy awakening others through teaching. They are here to bridge the connection between human and spiritual awareness. They often find themselves in educational environments, in leadership positions or as a mentor or advisor.
+        ///.
+        /// </summary>
+        public static string royal {
+            get {
+                return ResourceManager.GetString("royal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to They are strong-willed, driven by desire, ambitious and have a lively and magnetic personality. They are here to fuel transformation. They will keep motivating and taking action to move us forward into change. They do well as coaches, with strategy and execution tasks and in management positions.
+        ///.
+        /// </summary>
+        public static string warrior {
+            get {
+                return ResourceManager.GetString("warrior", resourceCulture);
             }
         }
     }

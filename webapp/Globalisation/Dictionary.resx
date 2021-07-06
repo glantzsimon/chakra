@@ -117,10 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="akashic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>main-chakra-codes\akashic.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="Calculate" xml:space="preserve">
     <value>Calculate</value>
   </data>
   <data name="ChakraCodes" xml:space="preserve">
     <value>Chakra Codes</value>
+  </data>
+  <data name="elder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>main-chakra-codes\elder.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="healer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>main-chakra-codes\healer.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="manifestor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>main-chakra-codes\manifestor.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="mystic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>main-chakra-codes\mystic.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="peacemaker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>main-chakra-codes\peacemaker.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="pioneer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>main-chakra-codes\pioneer.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="royal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>main-chakra-codes\royal.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="warrior" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>main-chakra-codes\warrior.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
 </root>

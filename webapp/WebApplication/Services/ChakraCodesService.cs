@@ -23,7 +23,8 @@ namespace K9.WebApplication.Services
             model.BirthYear = CalculateBirthYear(model.PersonModel);
             model.CurrentYear = CalculateCurrentYear(model.PersonModel);
             model.CurrentMonth = CalculateCurrentMonth(model.PersonModel);
-            model.CurrentYearMonthCodes = CalculateMonthChakraCodes(model.PersonModel);
+            model.MonthlyPlannerCodes = CalculateMonthChakraCodes(model.PersonModel);
+            model.YearlyPlannerCodes = CalculateYearlyPlannerChakraCodes(model.PersonModel);
             model.DharmaCodes = CalculateDharmaCodes(model.PersonModel);
             model.YearlyForecast = GetYearlyForecast(model.PersonModel);
             model.MonthlyForecast = GetMonthlyForecast(model.PersonModel);
@@ -41,7 +42,7 @@ namespace K9.WebApplication.Services
             return new ChakraCodeDetails
             {
                 ChakraCode = (EChakraCode)result,
-                TypeName = "Dominant"
+                Title = "Dominant"
             };
         }
 
@@ -53,7 +54,7 @@ namespace K9.WebApplication.Services
             {
                 ChakraCode = (EChakraCode)result,
                 IsActive = IsActive(date, 0, 27),
-                TypeName = "Sub Dominant"
+                Title = "Sub Dominant"
             };
         }
 
@@ -65,7 +66,7 @@ namespace K9.WebApplication.Services
             {
                 ChakraCode = (EChakraCode)result,
                 IsActive = IsActive(date, 27, 54),
-                TypeName = "Guide"
+                Title = "Guide"
             };
         }
 
@@ -77,7 +78,7 @@ namespace K9.WebApplication.Services
             {
                 ChakraCode = (EChakraCode)result,
                 IsActive = IsActive(date, 54, 81),
-                TypeName = "Gift"
+                Title = "Gift"
             };
         }
 
@@ -90,7 +91,7 @@ namespace K9.WebApplication.Services
             return new ChakraCodeDetails
             {
                 ChakraCode = result,
-                TypeName = "Birth Year"
+                Title = "Birth Year"
             };
         }
 
@@ -114,7 +115,7 @@ namespace K9.WebApplication.Services
             return new ChakraCodeDetails
             {
                 ChakraCode = result,
-                TypeName = "Current Year",
+                Title = "Current Year",
                 StartDate = GetYearStartDate(result),
                 EndDate = GetYearEndDate(result),
                 ShowDates = true
@@ -127,15 +128,15 @@ namespace K9.WebApplication.Services
             return activeMonth == null ? null : new ChakraCodeDetails
             {
                 ChakraCode = activeMonth.ChakraCode,
-                TypeName = "Current Month",
+                Title = "Current Month",
                 StartDate = activeMonth.StartDate,
                 EndDate = activeMonth.EndDate
             };
         }
 
-        public List<MonthChakraCodeModel> CalculateMonthChakraCodes(PersonModel person)
+        public List<ChakraCodePlannerModel> CalculateMonthChakraCodes(PersonModel person)
         {
-            var items = new List<MonthChakraCodeModel>();
+            var items = new List<ChakraCodePlannerModel>();
             var yearEnergy = CalculateCurrentYear(person);
             var monthEnergy = yearEnergy.ChakraCodeNumber - 6;
 
@@ -145,15 +146,37 @@ namespace K9.WebApplication.Services
             {
                 var monthNumber = i + 1;
 
-                items.Add(new MonthChakraCodeModel
+                items.Add(new ChakraCodePlannerModel
                 {
                     ChakraCode = (EChakraCode)monthEnergy,
-                    MonthNumber = monthNumber,
                     StartDate = GetMonthStartDate((EChakraCode)monthEnergy, monthNumber),
                     EndDate = GetMonthEndDate((EChakraCode)monthEnergy, monthNumber)
                 });
 
                 monthEnergy = monthEnergy.Increment();
+            }
+
+            return items;
+        }
+
+        public List<ChakraCodePlannerModel> CalculateYearlyPlannerChakraCodes(PersonModel person)
+        {
+            var items = new List<ChakraCodePlannerModel>();
+            var currentYear = CalculateCurrentYear(person);
+            var year = DateTime.Today.Year - 5;
+            var yearEnergy = currentYear.ChakraCodeNumber.Decrement(5);
+
+            for (int i = 0; i < 12; i++)
+            {
+                items.Add(new ChakraCodePlannerModel
+                {
+                    ChakraCode = (EChakraCode)yearEnergy,
+                    StartDate = GetYearStartDate((EChakraCode)yearEnergy, year),
+                    EndDate = GetYearEndDate((EChakraCode)yearEnergy, year)
+                });
+
+                year++;
+                yearEnergy = yearEnergy.Increment();
             }
 
             return items;
@@ -312,7 +335,7 @@ namespace K9.WebApplication.Services
             var yearEnergy = CalculateCurrentYear(person);
             var monthEnergy = CalculateCurrentMonth(person);
             var x = CalculateNumerology(yearEnergy.ChakraCodeNumber + monthEnergy.ChakraCodeNumber);
-            
+
             return new ChakraCodeForecast
             {
                 ChartCode = yearEnergy.ChakraCode,
@@ -325,7 +348,7 @@ namespace K9.WebApplication.Services
         {
             var monthEnergy = CalculateCurrentMonth(person);
             var x = CalculateNumerology(monthEnergy.ChakraCodeNumber + DateTime.Today.Day);
-            
+
             return new ChakraCodeForecast
             {
                 ChartCode = monthEnergy.ChakraCode,
@@ -395,9 +418,10 @@ namespace K9.WebApplication.Services
             }
         }
 
-        private DateTime GetYearStartDate(EChakraCode energy)
+        private DateTime GetYearStartDate(EChakraCode energy, int? year = null)
         {
-            var firstOfYear = new DateTime(DateTime.Now.Year, 1, 1);
+            year = year ?? DateTime.Now.Year;
+            var firstOfYear = new DateTime(year.Value, 1, 1);
             var previousYear = firstOfYear.AddYears(-1);
 
             switch (energy)
@@ -426,9 +450,10 @@ namespace K9.WebApplication.Services
             }
         }
 
-        private DateTime GetYearEndDate(EChakraCode energy)
+        private DateTime GetYearEndDate(EChakraCode energy, int? year = null)
         {
-            var firstOfYear = new DateTime(DateTime.Now.Year, 1, 1);
+            year = year ?? DateTime.Now.Year;
+            var firstOfYear = new DateTime(year.Value, 1, 1);
 
             switch (energy)
             {

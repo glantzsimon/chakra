@@ -3,6 +3,7 @@
 @model K9.WebApplication.Models.ChakraCodesModel
 
 <div class="well">
+    <h2>Monthly Outlook</h2>
     <div class="row month-chakra-code-container">
         <div class="col-xs-1">
             <strong>Jan</strong>
@@ -42,16 +43,17 @@
         </div>
     </div>
     <div class="row">
-        @foreach (var code in Model.CurrentYearMonthCodes)
+        @foreach (var code in Model.MonthlyPlannerCodes)
         {
             <div class="col-xs-1 month-chakra-code-container @code.IsCurrentCssClass">
-                <p>@Html.Partial("_ChakraCodeSmall", new ChakraCodeDetails
-                   {
-                       ChakraCode = code.ChakraCode,
-                       TypeName = ""
-                   })</p>
-                <p>@code.StartDate.ToShortDateString() - @code.EndDate.ToShortDateString()</p>
-            </div>
-        }
+                <p>
+                    @Html.Partial("_ChakraCodeSmall", new ChakraCodeDetails
+                {
+                    ChakraCode = code.ChakraCode
+                })
+            </p>
+            <p>@code.StartDate.ToShortDateString() - @code.EndDate.ToShortDateString()</p>
+        </div>
+    }
     </div>
 </div>

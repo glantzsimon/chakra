@@ -105,8 +105,17 @@
     <None Include="App.config" />
     <None Include="Globalisation.ruleset" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="NewFolder1\" />
+    <Content Include="main-chakra-codes\peacemaker.htm" />
+    <Content Include="main-chakra-codes\warrior.htm" />
+    <Content Include="main-chakra-codes\healer.htm" />
+    <Content Include="main-chakra-codes\akashic.htm" />
+    <Content Include="main-chakra-codes\manifestor.htm" />
+    <Content Include="main-chakra-codes\royal.htm" />
+    <Content Include="main-chakra-codes\mystic.htm" />
+    <Content Include="main-chakra-codes\elder.htm" />
+    <Content Include="main-chakra-codes\pioneer.htm" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

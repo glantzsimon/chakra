@@ -348,7 +348,7 @@
     <Compile Include="Models\ChakraCodesModel.cs" />
     <Compile Include="Models\ChakraCodeDetails.cs" />
     <Compile Include="Models\DharmaChakraCode.cs" />
-    <Compile Include="Models\MonthChakraCodeModel.cs" />
+    <Compile Include="Models\ChakraCodePlannerModel.cs" />
     <Compile Include="Options\PaymentsOptions.cs" />
     <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Options\PanelOptions.cs" />
@@ -653,6 +653,7 @@
     <Content Include="Views\Chakra\_ChakraCodesMonthlyPlanner.cshtml" />
     <Content Include="Views\Chakra\_ChakraCodesYearlyPlannerDetails.cshtml" />
     <Content Include="Views\Chakra\_ChakraCodeSmall.cshtml" />
+    <Content Include="Views\Chakra\_ChakraCodesYearPlanner.cshtml" />
     <None Include="Web.Integration.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

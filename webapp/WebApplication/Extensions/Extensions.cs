@@ -42,14 +42,22 @@ namespace K9.WebApplication.Extensions
             return (int)code == 1 ? (EChakraCode)9 : code - 1;
         }
 
-        public static int Increment(this int code)
+        public static int Increment(this int code, int value = 1)
         {
-            return code == 9 ? 1 : code + 1;
+            for (int i = 0; i < value; i++)
+            {
+                code = code == 9 ? 1 : code + 1;
+            }
+            return code;
         }
 
-        public static int Decrement(this int code)
+        public static int Decrement(this int code, int value = 1)
         {
-            return code == 1 ? 9 : code - 1;
+            for (int i = 0; i < value; i++)
+            {
+                code = code == 1 ? 9 : code - 1;
+            }
+            return code;
         }
     }
 }

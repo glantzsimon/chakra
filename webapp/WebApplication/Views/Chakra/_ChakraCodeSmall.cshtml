@@ -1,10 +1,6 @@
 ﻿@using K9.SharedLibrary.Extensions
 @model K9.WebApplication.Models.ChakraCodeDetails
 
-@{
-    var typeClass = Model.TypeName.RemoveSpaces();
-}
-
-<div class="chakra-code-container small @typeClass-container">
+<div class="chakra-code-container small">
     <img src="~/Images/chakracodes/@($"{Model.Name}.png")" />
 </div>
