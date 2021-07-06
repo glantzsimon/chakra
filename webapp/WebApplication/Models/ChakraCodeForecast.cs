@@ -12,9 +12,15 @@ namespace K9.WebApplication.Models
 
         public int BottomNumber { get; set; }
         
-        public int RowNumber { get; set; }
+        public int? RowNumber { get; set; }
 
         public string Name => Attributes.Name;
+        
+        public string Forecast => Attributes.ResourceType.GetValueFromResource(ForecastName);
+
+        private int RowNumberCalculated => RowNumber ?? TopNumber - (int)ChartCode;
+
+        private string ForecastName => $"_{ChartCode}_{RowNumberCalculated}";
 
         private ChakraCodeEnumMetaDataAttribute Attributes => ChartCode.GetAttribute<ChakraCodeEnumMetaDataAttribute>();
     }

@@ -13,7 +13,7 @@
         }
     </div>
     <div class="row">
-        @foreach (var code in Model.MonthlyPlannerCodes)
+        @foreach (var code in Model.YearlyPlannerCodes)
         {
             <div class="col-xs-1 month-chakra-code-container @code.IsCurrentCssClass">
                 <p>
@@ -22,6 +22,7 @@
                         ChakraCode = code.ChakraCode
                     })
                 </p>
+                <p>@code.StartDate.ToShortDateString() - @code.EndDate.ToShortDateString()</p>
             </div>
         }
     </div>
