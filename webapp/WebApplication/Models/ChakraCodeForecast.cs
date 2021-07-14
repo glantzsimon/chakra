@@ -16,7 +16,7 @@ namespace K9.WebApplication.Models
 
         public string Name => Attributes.Name;
         
-        public string Forecast => Attributes.ResourceType.GetValueFromResource(ForecastName);
+        public string Forecast => Attributes.ResourceType.GetValueFromResource(ForecastName) ?? string.Empty;
 
         private int RowNumberCalculated => RowNumber ?? TopNumber - (int)ChartCode;
 

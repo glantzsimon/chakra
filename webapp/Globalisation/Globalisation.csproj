@@ -107,6 +107,30 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="forecasts\3-6.htm" />
+    <Content Include="forecasts\3-5.htm" />
+    <Content Include="forecasts\3-4.htm" />
+    <Content Include="forecasts\3-3.htm" />
+    <Content Include="forecasts\3-2.htm" />
+    <Content Include="forecasts\3-1.htm" />
+    <Content Include="forecasts\2-9.htm" />
+    <Content Include="forecasts\2-8.htm" />
+    <Content Include="forecasts\2-7.htm" />
+    <Content Include="forecasts\2-6.htm" />
+    <Content Include="forecasts\2-5.htm" />
+    <Content Include="forecasts\2-4.htm" />
+    <Content Include="forecasts\2-3.htm" />
+    <Content Include="forecasts\2-2.htm" />
+    <Content Include="forecasts\2-1.htm" />
+    <Content Include="forecasts\1-9.htm" />
+    <Content Include="forecasts\1-8.htm" />
+    <Content Include="forecasts\1-7.htm" />
+    <Content Include="forecasts\1-6.htm" />
+    <Content Include="forecasts\1-5.htm" />
+    <Content Include="forecasts\1-4.htm" />
+    <Content Include="forecasts\1-3.htm" />
+    <Content Include="forecasts\1-2.htm" />
+    <Content Include="forecasts\1-1.htm" />
     <Content Include="main-chakra-codes\peacemaker.htm" />
     <Content Include="main-chakra-codes\warrior.htm" />
     <Content Include="main-chakra-codes\healer.htm" />

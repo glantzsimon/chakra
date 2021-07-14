@@ -349,6 +349,870 @@ namespace K9.Globalisation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Very fussy and introverted period, good for working silently. Can end with a very late statement.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Feelings predominate, or should. (4) Healing time for the body while the mind may be reviewing life’s situations.  Awareness element brings some insight (7); perfect time to write about it, not acting on anything. Becomes inspiring towards the end.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _3_1 {
+            get {
+                return ResourceManager.GetString("_3_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Re-investments, reaping old debts, gambling day, may have to be spent on travel.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Strong drive to do - new ideas (5). Good time to act on business or express some progressive thoughts on finance. Insightful rewarding time at spiritual levels (8).  Moving ahead with new ideas is beneficial at this time.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _3_2 {
+            get {
+                return ResourceManager.GetString("_3_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Time of completion and careful decisions. Retrospection, past decisions, emotional evolution. Stability, planning; most positive time in groups.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Mind is striving for balance with the overview of the past. Making plans and keeping the long term vision in mind (6). Visualization, or clearing the vision at least, while keeping a universal view of things (9).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _3_3 {
+            get {
+                return ResourceManager.GetString("_3_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Start: “so shall ye reap”; hectic but firming, good for natural things.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Time to put a vision into action, but stay grounded (1). Easy time to see reactions. Begin cycle with meditation (7), connecting with the universe before stepping out.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _3_4 {
+            get {
+                return ResourceManager.GetString("_3_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Partnerships and associations leading to money and finance. Good for justice.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Time for reaping the benefits of social contacts and sharing with others (8). Beneficial time for your friends as well as yourself. (2)
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _3_5 {
+            get {
+                return ResourceManager.GetString("_3_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Hyper-emotional period. Lose friendships, disappointment affecting nervous system. Nervous breakdown.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    There is a strong tendency towards action that may be inappropriate (3). Contemplation time with insights rather than action, allow the vision to change but don’t act on changing it till the next cycle (9).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _3_6 {
+            get {
+                return ResourceManager.GetString("_3_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Test phase in regards to sowing - instant karma cycle.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Period for beginning things (1) - actions done in the light of Karma Yoga in particular; working in the service of others, checking in with your heart center (4)
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _3_7 {
+            get {
+                return ResourceManager.GetString("_3_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Period for expansion, new contacts, meet new people who help and stimulate in new projects. Good for pruning people.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    This can be a very dynamic time to be working with people as your energy can be very inspiring and motivating to them (2). Sharing new ideas and letting them spread through social networks (5).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _3_8 {
+            get {
+                return ResourceManager.GetString("_3_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Decisions, artistic criticism; some problems in the last half, worrisome period.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Very active period in the beginning (3); creative thoughts and actions but some contemplating time should be allowed so as not to go too far (6), pace yourself and take time in the latter half to check the effects/results of what you are doing.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _3_9 {
+            get {
+                return ResourceManager.GetString("_3_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Emotional desire for changes; mind spiritualized. Time to think about new activities, think carefully about the next phase.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Excellent planning time good for new visions and ideas to come in, can also be active but with careful contemplation (5). Good time to communicate your global vision and make plans to act on it (9).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _4_1 {
+            get {
+                return ResourceManager.GetString("_4_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Starting something new in family, or starting new family. Things to do with institutions. Stable decisions.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Family being the greater spiritual family, this is a good time to be initiating the projects with people of like mind (1). Communication is at a high level for understanding and seeing the whole picture/project (6).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _4_2 {
+            get {
+                return ResourceManager.GetString("_4_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Association leading to beneficial period later. Hard beginning, good end. Spiritual quietness; time for nature.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    The beginning should be meditative and quiet, best thing in a setting connected with nature (7). Allow some inspiration from the universe, after which sharing with others will flow (2).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _4_3 {
+            get {
+                return ResourceManager.GetString("_4_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Disappointment, often financially if over extended; money in first half, money out second half.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    First half dynamic and optimistic (3), good time to do and gain but do so early; last half should become more introverted - going inward to feel what is really going on in the heart center. Be thankful for what is gained in the first half of the cycle but drop expectations (8).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _4_4 {
+            get {
+                return ResourceManager.GetString("_4_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Test for nervous system, time to relax. Loss of family, friends; introspection; period for getting things in order.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    This is a deeply contemplative time with focus on how you really feel about things (4). Allow silent time and communication with the higher forces; journal and look at purity of motives. Cleansing time for body and mind; not a time for action other than service to fellow beings (9).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _4_5 {
+            get {
+                return ResourceManager.GetString("_4_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Time for rapid expansion, looking for new ideas and projects. Watch for accidents.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    New ideas will be flowing in and this is prime time for beginning them. The energy and inspiration are in full force moving towards implementing the project and planting the seeds (1), they might even sprout early. Watch the mind as it will tend to race a little ahead of physical actions (5).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _4_6 {
+            get {
+                return ResourceManager.GetString("_4_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Harmonious period. Excellent for decisions regarding others. Good day to approach people.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Social expansion time with good communication of thought and feelings, life is in the flow (2). If there are unresolved issues with anyone this is the time to resolve (6).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _4_7 {
+            get {
+                return ResourceManager.GetString("_4_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Over- optimism going to failure, negative emotions, feeling of tension, writing expression.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Dynamic extroverted energy to act (3), spiritual insight, changing to non action more reflective time halfway through (7). Good time for observing the inspirations and writing about them - Swadhiyaya
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _4_8 {
+            get {
+                return ResourceManager.GetString("_4_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Time for settlements, payments, etc. Hard work, rewards come hard. Go cautiously, watch details.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Meditation should be the beginning of this day, with some contemplative thought towards Karma Yoga and whether we are living in it. Clearing the past and looking at what else we can do for others (4). The feeling can be very rewarding and this is a good time to focus on those feelings (8).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _4_9 {
+            get {
+                return ResourceManager.GetString("_4_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Settled down, social contacts, family, friends, acquaintances, institutions; all help with decisions.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Good co-operative period for networking, meetings and gaining feedback from various perspectives, about projects (2). Very good to analyze what is happening with an open mind (6).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _5_1 {
+            get {
+                return ResourceManager.GetString("_5_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Starts out well but ends badly if over-extended; sensitivity and introversion, fighting yourself.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    The start is introverted with a strong creative drive to do something (3), then becomes positive outgoing with feelings drawing you in to a quiet place (7).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _5_2 {
+            get {
+                return ResourceManager.GetString("_5_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Positive, but, financial test period, do not buy or sell.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Can be a rewarding time (8), depending on your karma, but not a time of action; better to sit in a quiet place, be thankful for all that you have and observe how you feel about it all (4).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _5_3 {
+            get {
+                return ResourceManager.GetString("_5_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Indulgence, emotional; change in spiritual matters.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Contemplative time again, overviewing your life (9), with a strong reactive tendency to make some changes and do something new and different (5). too many ideas can create a certain amount of anxiety; they cannot all be acted upon.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _5_4 {
+            get {
+                return ResourceManager.GetString("_5_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Good period, reasonable drive, decisions, usually regarding projects, often time for paying out rather than taking in.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    This is also a very good time to start a project (1) with a balanced perspective and good vision in mind. It is a stable and reasonable period that maintains a very level headed approach (6).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _5_5 {
+            get {
+                return ResourceManager.GetString("_5_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Introversion, watch procrastination; nature, beneficial settlement in later half, with associations.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Social time with relaxed energy, hangout in the beginning (2) but with the later half comes more rewards, inspiration and a more active energy at least at the mind level (7).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _5_6 {
+            get {
+                return ResourceManager.GetString("_5_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Fruition period, creative reward, but last half may be foolishly spent.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    The dynamic energy can take this fruition time too far and result in loss during the latter half, overspending, etc (8). Spiritually can be very inspiring time with creativity bubbling in new visual ideas (3).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _5_7 {
+            get {
+                return ResourceManager.GetString("_5_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Time to make careful decisions, can represent a test on nervous system. Reflection or contemplation time.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    This should remain an inner time - not a time for action other than Karma yoga with no expectations (4). Can lead to many insights on past experiences, healing with connection to universal energies (9). Stay centered and be sure to take a lot of quiet time.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _5_8 {
+            get {
+                return ResourceManager.GetString("_5_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Time for a fresh start, new enterprise, something you haven’t done before, but stay within the scope of your knowledge; dont be foolish and watch accidents.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Dynamic time when new ideas and inspirations can be overwhelming; stay grounded and do not let your mind to ge too far ahead of your body actions (1). Excellent for action and communication even physical travel (5).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _5_9 {
+            get {
+                return ResourceManager.GetString("_5_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Introversion, feeling withdrawn, repressed emotions, test period.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Time to center on awareness of feelings, healing (4). With contemplation and yoga practice it can be a very intuitive and inspirational time. Attention to physical and emotional feelings can bring a lot of insight (7).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _6_1 {
+            get {
+                return ResourceManager.GetString("_6_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Ripe time for business ventures, transactions, accumulation, could be a lucrative period.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    As we feel rewards coming in (8) we feel the akashic possibilities and urge to do something, new ideas (5) - how to benefit from them. Appropriate actions can bring immediate results during this time.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _6_2 {
+            get {
+                return ResourceManager.GetString("_6_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Possible family worries. Decision regarding spirituality of mental health.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Overview of life’s situations, seeing both the sides of a coin (9). Good time to weed out any potential problems and make decisions about what we preach, living in harmony with our belief system (6).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _6_3 {
+            get {
+                return ResourceManager.GetString("_6_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        A rest period, although possible head pressures, settlement in later half.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Feels like a rest time but with a drive to do something physical or in the material world (1). Act, and even start something but with an awareness that has thought it through to the completion (7). Plan in first half, action later.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _6_4 {
+            get {
+                return ResourceManager.GetString("_6_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Very active period, partnerships, business, financial gains through associations.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Social connections should be established or affirmed at this time in order to move into prosperity (2). Communication and sharing will bring very good benefits and be obviously rewarding (8).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _6_5 {
+            get {
+                return ResourceManager.GetString("_6_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Highly emotional period, passionate, associations turning badly. Time to make resolutions; sit back and think carefully.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    If everything was put in order during last cycle this will be a dynamic advancement (9), optimism and energy can be a bit overwhelming, some over reactions may come up (3). Keep things in moderation and calm during the first half, karma in mind, and allow for quiet reflection in latter half.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _6_6 {
+            get {
+                return ResourceManager.GetString("_6_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Start, provided you pay attention to detail and take care.  No foolish ventures.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Pay particular attention to the effects or results of what you are doing, karma yoga time (4), leave personal desires behind (1). Results can come instantly.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _6_7 {
+            get {
+                return ResourceManager.GetString("_6_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Frustration, time of activity, holiday, travel, extroversion, outward going, associations dull.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Keep communication open and this can be a very progressive, happy time with your friends (2) - you lead with your own inspirations and they will be glad to listen or follow (5).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _6_8 {
+            get {
+                return ResourceManager.GetString("_6_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Phase of disappointments in family decisions if over extended. Very emotional, lose out on friendships.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    High energy in the beginning can lead to over optimism (3). Consider the latter half will be non-active introverted time and act accordingly. Planning and re-assessing works well in second half (6).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _6_9 {
+            get {
+                return ResourceManager.GetString("_6_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Family and finances and organizations, decisions, possible some small worries.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Good time for income and decisions regarding how to best utilize it (8). Rewards are good and it is best if we contemplate from where they come from, then decide and plan what comes next (6).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _7_1 {
+            get {
+                return ResourceManager.GetString("_7_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Strong spiritual period, wisdom, heart disorders, rest in first half.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Very good time to go inward for an overview of life with spiritual insight (7). Review of the last complete nine cycles from a perspective of evolution. Meditational time to go for higher consciousness (9).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _7_2 {
+            get {
+                return ResourceManager.GetString("_7_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Money in, reaping of sowing period, time to buy and sell at a profit. Good to start financial things.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Prime time for investment (8), it can be rewarding in the present and lead to greater rewards in later cycles, Plant your seeds with fruition already in sight (1).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _7_3 {
+            get {
+                return ResourceManager.GetString("_7_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Time to guard the tongue, emotionally turbulent period, relationships particularly.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Contemplative time in relations, with good attitude this can be a very positive time to see how we relate, what we need to communicate to whom and how best to do it with compassion (2). Reflection on the situations needs to be there before speaking (9).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _7_4 {
+            get {
+                return ResourceManager.GetString("_7_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Over optimism. Sowing in the first half extremely positive, latter half tends to go negative.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Strong dynamics start with energy and transformation (3) but be prepared to slow down and check in with your feelings in the second half; it becomes a time of intuition and going inward quietly (1).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _7_5 {
+            get {
+                return ResourceManager.GetString("_7_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Time, time to work of details with associations. Watch you do not get bogged down.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Intuitive and sensitive time - apply compassion (4). Insights through feeling can help to perceive and analyse social situations during this period. Especially positive time for healing with others (2).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _7_6 {
+            get {
+                return ResourceManager.GetString("_7_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Tremendous activity, change, travel in first half, disappointment causing a change in life or vice versa in latter half.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Drive towards action and doing, can be a very dynamic time to get things done (3). Changes and accomplishments come easy with many new ideas but you need to check out those ideas and action with intuition and feeling in latter half (5). Think twice before acting; or, think and feel, then decide.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _7_7 {
+            get {
+                return ResourceManager.GetString("_7_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Test phase regarding crisis in the family, sit tight financially.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Good time for analysis of family or group activities; contemplate and allow time for intuition to come through quietly (6), listen and feel (4). Breath and watch for the insights, in this way you see what is coming and are prepared.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _7_8 {
+            get {
+                return ResourceManager.GetString("_7_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Spiritual and mental conflicts. Possible accidents, heart, lungs, a period of positive change, close to nature.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Relax and just observe the many inspirations during the first half rather than acting on any of them; allow the mind to be clear and avoid rushing (7). Positive time to be in nature and do little planning. Second half can be very active and rewarding (5).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _7_9 {
+            get {
+                return ResourceManager.GetString("_7_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Time of financial settlement, possible overspending. Spirituality may have to look after someone.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    This contemplation time can be very rewarding (8); a period of feeling very connected to the universe - feeling the divine presence (9). All goes well at the material level and we sense that the universe supports us.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _8_1 {
+            get {
+                return ResourceManager.GetString("_8_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Completion period. Resist the urge to start something prematurely. Time to think and gather together loose ends.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Complete previous projects before starting anything new. Contemplate and plan for the project you are commencing (1), things done with a spiritual overview, with the consideration of benefits for all, will do well (9).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _8_2 {
+            get {
+                return ResourceManager.GetString("_8_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Time for sage advice, seek cooperation of old associates. Very positive influence for looking up, positive and action but unsure in mind.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    A strong time to act socially (1), making connections and beginning projects that involve others (2). Listen for what can be learned from them, keeping in mind that the divine shines in through many.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _8_3 {
+            get {
+                return ResourceManager.GetString("_8_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Lazy period, a tendency to become argumentative. Do things early. Feeling for new associations. Sad ending.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Transformation and action in social situations (2); can lead to positive change if done smoothly with compassion. Keep your vision in mind with the goal towards early accomplishments (3), then go into a more quiet feeling mode with meditation (with others) in latter half.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _8_4 {
+            get {
+                return ResourceManager.GetString("_8_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Conflict period. On guard. Disappointment in social affairs.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Quiet feeling, time is good for healing (4), but with an urge towards action (3). Keep actions in the area of healing. Sensitivity is high - use it for expanding awareness, not reacting. Positive time for developing intuition.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _8_5 {
+            get {
+                return ResourceManager.GetString("_8_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Accident prone period, personal safety, no drastic change. Do not start any projects or work on them. 
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Mind goes too far ahead of heart in this time so it is important to have some quiet sitting time before jumping to action in spite of the urge to move (5). Watch for intuitive tips about how things could go (4).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _8_6 {
+            get {
+                return ResourceManager.GetString("_8_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Change, travel, decisions should be made and acted upon without delay. Quite positve phase, family changes, etc.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Optimism and balance provide a clear picture of what can be done and how to do it (6). New directions with purpose (5).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _8_7 {
+            get {
+                return ResourceManager.GetString("_8_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        First half may be negative if it is not spiritual. Decisions in early part will bring fruit by the end of this cycle.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Relaxed time (7) for some inspired reading in the first half (6); be thankful for what you have. Latter half brings more.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _8_8 {
+            get {
+                return ResourceManager.GetString("_8_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Good period, unsettled first half, financial gains in the second half.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Very rewarding time, receiving with gratitude in the first half and winning the lotto in the second half (8). Good time to buy what you were looking for. In the spiritual cycles it’s a wonderful time to gain some universal bliss as if by grace (7).
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _8_9 {
+            get {
+                return ResourceManager.GetString("_8_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to They are freedom loving, fearless and have a desire to express, especially through the voice or writing. They are here to express. Without their voice no one would ever hear the demand for change. They do well in communications/media, marketing and public speaking..
         /// </summary>
         public static string akashic {
