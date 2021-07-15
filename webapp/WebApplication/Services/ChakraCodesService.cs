@@ -147,7 +147,7 @@ namespace K9.WebApplication.Services
             {
                 items.Add(new ChakraCodePlannerModel
                 {
-                    ChakraCode = currentMonthCode.ChakraCode,
+                    ChakraCode = (EChakraCode)CalculateNumerology(day.Day),
                     StartDate = day,
                     EndDate = day,
                 });
@@ -358,7 +358,6 @@ namespace K9.WebApplication.Services
         public ChakraCodeForecast GetMonthlyForecast(PersonModel person)
         {
             var yearEnergy = CalculateCurrentYear(person);
-            var monthEnergy = CalculateCurrentMonth(person);
             var month = CalculateNumerology(DateTime.Today.Month);
             var x = CalculateNumerology(yearEnergy.ChakraCodeNumber + month);
 

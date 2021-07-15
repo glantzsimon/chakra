@@ -19,7 +19,7 @@ namespace K9.WebApplication.Models
         
         public string Forecast => Attributes.ResourceType.GetValueFromResource(ForecastName) ?? string.Empty;
 
-        public string Title => RowNumber == null ? $"{TopNumber}/{BottomNumber}" : RowNumber.ToString();
+        public string Title => RowNumber == null ? $"{(int)ChartCode} - {TopNumber}/{BottomNumber}" : $"{(int)ChartCode} - {RowNumber}";
 
         private int RowNumberCalculated => RowNumber ?? (TopNumber - (int)ChartCode).ToNumerology();
 
