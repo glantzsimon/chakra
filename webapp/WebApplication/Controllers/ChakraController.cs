@@ -12,7 +12,6 @@ using K9.WebApplication.Helpers;
 
 namespace K9.WebApplication.Controllers
 {
-    [Authorize]
     public class ChakraController : BaseChakraController
     {
         private readonly IAuthentication _authentication;
