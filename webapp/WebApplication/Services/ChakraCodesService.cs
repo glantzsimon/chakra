@@ -25,7 +25,7 @@ namespace K9.WebApplication.Services
             model.CurrentMonth = CalculateCurrentMonth(model.PersonModel);
             model.MonthlyPlannerCodes = CalculateMonthChakraCodes(model.PersonModel);
             model.YearlyPlannerCodes = CalculateYearlyPlannerChakraCodes(model.PersonModel);
-            model.DailyPlannerCodes = CalculateDailyPlannerChakraCodes(model.PersonModel);
+            //model.DailyPlannerCodes = CalculateDailyPlannerChakraCodes(model.PersonModel);
             model.DharmaCodes = CalculateDharmaCodes(model.PersonModel);
             model.YearlyForecast = GetYearlyForecast(model.PersonModel);
             model.MonthlyForecast = GetMonthlyForecast(model.PersonModel);
