@@ -330,6 +330,7 @@
     <Compile Include="Config\StripeConfiguration.cs" />
     <Compile Include="Constants\SessionConstants.cs" />
     <Compile Include="Controllers\BaseChakraController.cs" />
+    <Compile Include="Enums\EForecastType.cs" />
     <Compile Include="Enums\EChakraCode.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Helpers\General.cs" />
@@ -654,7 +655,6 @@
     <Content Include="Views\Chakra\_ChakraCodesYearlyPlannerDetails.cshtml" />
     <Content Include="Views\Chakra\_ChakraCodeSmall.cshtml" />
     <Content Include="Views\Chakra\_ChakraCodesYearPlanner.cshtml" />
-    <Content Include="Views\Chakra\_ChakraCodeForecast.cshtml" />
     <Content Include="Views\Chakra\_ChakraCodesDailyPlanner.cshtml" />
     <None Include="Web.Integration.config">
       <DependentUpon>Web.config</DependentUpon>

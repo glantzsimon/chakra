@@ -41,4 +41,19 @@
     </div>
 </div>
 
+<script type="text/javascript">
 
+    $(function() {
+        $(".chakra-code-planner-item").click(function() {
+            var forecastType = $(this).attr("data-forecast-type");
+            var offset = $(this).attr("data-offset");
+
+            ajaxcontroller().get("@Url.Action("CalculateForecast", "Chakra")",
+                {
+                    forecastType: forecastType,
+                    offset: offset
+                });
+        });
+    });
+
+</script>

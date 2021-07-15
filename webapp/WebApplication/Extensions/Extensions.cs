@@ -33,14 +33,14 @@ namespace K9.WebApplication.Extensions
             return value;
         }
 
-        public static EChakraCode Increment(this EChakraCode code)
+        public static EChakraCode Increment(this EChakraCode code, int value = 1)
         {
-            return (int)code == 9 ? (EChakraCode)1 : code + 1;
+            return (EChakraCode)((int)code).Increment(value);
         }
 
-        public static EChakraCode Decrement(this EChakraCode code)
+        public static EChakraCode Decrement(this EChakraCode code, int value = 1)
         {
-            return (int)code == 1 ? (EChakraCode)9 : code - 1;
+            return (EChakraCode)((int)code).Decrement(value);
         }
 
         public static int Increment(this int code, int value = 1)
@@ -80,7 +80,7 @@ namespace K9.WebApplication.Extensions
                 {
                     result = value;
                 }
-               
+
                 result = result.ToString().Select(e => int.Parse(e.ToString())).Sum();
             }
 

@@ -6,9 +6,13 @@ using K9.WebApplication.Services;
 using NLog;
 using System;
 using System.Web.Mvc;
+using K9.WebApplication.Constants;
+using K9.WebApplication.Enums;
+using K9.WebApplication.Helpers;
 
 namespace K9.WebApplication.Controllers
 {
+    [Authorize]
     public class ChakraController : BaseChakraController
     {
         private readonly IAuthentication _authentication;
@@ -41,6 +45,31 @@ namespace K9.WebApplication.Controllers
                 model = _chakraCodesService.CalculateChakraCodes(model);
             }
             return View("Index", model);
+        }
+
+        [Route("calculate-forecast")]
+        public JsonResult CalculateForecast(EForecastType forecastType, int offset)
+        {
+            ChakraCodeForecast result;
+            var storedDateOfBirth = SessionHelper.GetDateTimeValue(SessionConstants.DateOfBirth);
+            var personModel = new PersonModel(storedDateOfBirth.Value);
+
+            switch (forecastType)
+            {
+                case EForecastType.Monthly:
+                    result = _chakraCodesService.GetMonthlyForecast(personModel, offset);
+                    break;
+
+                case EForecastType.Daily:
+                    result = _chakraCodesService.GetDailyForecast(personModel, offset);
+                    break;
+
+                default:
+                    result = _chakraCodesService.GetYearlyForecast(personModel, offset);
+                    break;
+            }
+
+            return Json(result, JsonRequestBehavior.AllowGet);
         }
 
         public override string GetObjectName()

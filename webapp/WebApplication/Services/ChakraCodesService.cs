@@ -4,6 +4,8 @@ using K9.WebApplication.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using K9.Base.WebApplication.Helpers;
+using K9.WebApplication.Constants;
 
 namespace K9.WebApplication.Services
 {
@@ -15,6 +17,8 @@ namespace K9.WebApplication.Services
             {
                 return model;
             }
+
+            SessionHelper.SetValue(SessionConstants.DateOfBirth, model.PersonModel.DateOfBirth.ToString(FormatConstants.SessionDateTimeFormat));
 
             model.Dominant = CalculateDominant(model.PersonModel.DateOfBirth);
             model.SubDominant = CalculateSubDominant(model.PersonModel.DateOfBirth);
@@ -96,7 +100,7 @@ namespace K9.WebApplication.Services
             };
         }
 
-        public ChakraCodeDetails CalculateCurrentYear(PersonModel person)
+        public ChakraCodeDetails CalculateCurrentYear(PersonModel person, int? offset = null)
         {
             var result = CalculateBirthYear(person).ChakraCode;
 
@@ -113,6 +117,16 @@ namespace K9.WebApplication.Services
                 result = result.Increment();
             }
 
+            if (offset < 0)
+            {
+                result = result.Decrement(Math.Abs(offset.Value));
+            }
+
+            if (offset > 0)
+            {
+                result = result.Increment(offset.Value);
+            }
+
             return new ChakraCodeDetails
             {
                 ChakraCode = result,
@@ -123,9 +137,23 @@ namespace K9.WebApplication.Services
             };
         }
 
-        public ChakraCodeDetails CalculateCurrentMonth(PersonModel person)
+        public ChakraCodeDetails CalculateCurrentMonth(PersonModel person, int? offset = null)
         {
-            var activeMonth = CalculateMonthChakraCodes(person).FirstOrDefault(e => e.IsCurrent);
+            var monthChakraCodes = CalculateMonthChakraCodes(person);
+            var chakraCode = monthChakraCodes.FirstOrDefault(e => e.IsCurrent).ChakraCode;
+
+            if (offset < 0)
+            {
+                chakraCode = chakraCode.Decrement(Math.Abs(offset.Value));
+            }
+
+            if (offset > 0)
+            {
+                chakraCode = chakraCode.Increment(offset.Value);
+            }
+
+            var activeMonth = monthChakraCodes.FirstOrDefault(e => e.ChakraCode == chakraCode);
+
             return activeMonth == null ? null : new ChakraCodeDetails
             {
                 ChakraCode = activeMonth.ChakraCode,
@@ -155,7 +183,7 @@ namespace K9.WebApplication.Services
                 day = DateTime.Today.AddDays(i);
                 i++;
             }
-           
+
             return items;
         }
 
@@ -188,8 +216,9 @@ namespace K9.WebApplication.Services
         {
             var items = new List<ChakraCodePlannerModel>();
             var currentYear = CalculateCurrentYear(person);
-            var year = DateTime.Today.Year - 5;
-            var yearEnergy = currentYear.ChakraCodeNumber.Decrement(5);
+            var offset = 5;
+            var year = DateTime.Today.Year - offset;
+            var yearEnergy = currentYear.ChakraCodeNumber.Decrement(offset);
 
             for (int i = 0; i < 12; i++)
             {
@@ -197,7 +226,8 @@ namespace K9.WebApplication.Services
                 {
                     ChakraCode = (EChakraCode)yearEnergy,
                     StartDate = GetYearStartDate((EChakraCode)yearEnergy, year),
-                    EndDate = GetYearEndDate((EChakraCode)yearEnergy, year)
+                    EndDate = GetYearEndDate((EChakraCode)yearEnergy, year),
+                    Offset = i - offset
                 });
 
                 year++;
@@ -341,10 +371,10 @@ namespace K9.WebApplication.Services
             return items;
         }
 
-        public ChakraCodeForecast GetYearlyForecast(PersonModel person)
+        public ChakraCodeForecast GetYearlyForecast(PersonModel person, int? offset = 0)
         {
             var dominant = CalculateDominant(person.DateOfBirth);
-            var yearEnergy = CalculateCurrentYear(person);
+            var yearEnergy = CalculateCurrentYear(person, offset);
             var x = CalculateNumerology(dominant.ChakraCodeNumber + yearEnergy.ChakraCodeNumber);
 
             return new ChakraCodeForecast
@@ -355,10 +385,10 @@ namespace K9.WebApplication.Services
             };
         }
 
-        public ChakraCodeForecast GetMonthlyForecast(PersonModel person)
+        public ChakraCodeForecast GetMonthlyForecast(PersonModel person, int? offset = 0)
         {
             var yearEnergy = CalculateCurrentYear(person);
-            var month = CalculateNumerology(DateTime.Today.Month);
+            var month = CalculateNumerology(DateTime.Today.Month + (offset ?? 0));
             var x = CalculateNumerology(yearEnergy.ChakraCodeNumber + month);
 
             return new ChakraCodeForecast
@@ -369,10 +399,10 @@ namespace K9.WebApplication.Services
             };
         }
 
-        public ChakraCodeForecast GetDailyForecast(PersonModel person)
+        public ChakraCodeForecast GetDailyForecast(PersonModel person, int? offset = 0)
         {
             var monthEnergy = CalculateCurrentMonth(person);
-            var x = CalculateNumerology(monthEnergy.ChakraCodeNumber + DateTime.Today.Day);
+            var x = CalculateNumerology(monthEnergy.ChakraCodeNumber + DateTime.Today.Day + (offset ?? 0));
 
             return new ChakraCodeForecast
             {

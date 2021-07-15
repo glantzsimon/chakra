@@ -11,8 +11,10 @@ namespace K9.WebApplication.Models
         public int ChakraCodeNumber => (int)ChakraCode;
 
         public DateTime StartDate { get; set; }
-        
+
         public DateTime EndDate { get; set; }
+
+        public int Offset { get; set; }
 
         public bool IsCurrent => DateTime.Now.IsBetween(StartDate, EndDate);
 

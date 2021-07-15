@@ -19,6 +19,10 @@ namespace K9.WebApplication.Models
 
         public string Title { get; set; }
 
+        public EForecastType Type { get; set; }
+
+        public int Offset { get; set; }
+
         public bool IsCurrent => DateTime.Now.IsBetween(StartDate, EndDate);
 
         public string IsCurrentCssClass => IsCurrent ? "current" : "";
