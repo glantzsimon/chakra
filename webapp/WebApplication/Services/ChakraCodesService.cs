@@ -25,7 +25,7 @@ namespace K9.WebApplication.Services
             model.CurrentMonth = CalculateCurrentMonth(model.PersonModel);
             model.MonthlyPlannerCodes = CalculateMonthChakraCodes(model.PersonModel);
             model.YearlyPlannerCodes = CalculateYearlyPlannerChakraCodes(model.PersonModel);
-            //model.DailyPlannerCodes = CalculateDailyPlannerChakraCodes(model.PersonModel);
+            model.DailyPlannerCodes = CalculateDailyPlannerChakraCodes(model.PersonModel);
             model.DharmaCodes = CalculateDharmaCodes(model.PersonModel);
             model.YearlyForecast = GetYearlyForecast(model.PersonModel);
             model.MonthlyForecast = GetMonthlyForecast(model.PersonModel);
@@ -359,12 +359,13 @@ namespace K9.WebApplication.Services
         {
             var yearEnergy = CalculateCurrentYear(person);
             var monthEnergy = CalculateCurrentMonth(person);
-            var x = CalculateNumerology(yearEnergy.ChakraCodeNumber + monthEnergy.ChakraCodeNumber);
+            var month = CalculateNumerology(DateTime.Today.Month);
+            var x = CalculateNumerology(yearEnergy.ChakraCodeNumber + month);
 
             return new ChakraCodeForecast
             {
                 ChartCode = yearEnergy.ChakraCode,
-                TopNumber = monthEnergy.ChakraCodeNumber,
+                TopNumber = month,
                 BottomNumber = x
             };
         }

@@ -5,11 +5,11 @@
 <div class="well">
     <h2>Monthly Outlook</h2>
     <div class="row">
-        @foreach (var code in Model.MonthlyPlannerCodes)
+        @foreach (var code in Model.DailyPlannerCodes)
         {
             <div class="col-xs-4 col-sm-3 col-md-2 month-chakra-code-container @code.IsCurrentCssClass">
                 <div>
-                    <strong>@code.StartDate.ToString("MMM")</strong>
+                    <strong>@code.StartDate.ToString("dd")</strong>
                 </div>
                 <p>
                     @Html.Partial("_ChakraCodeSmall", new ChakraCodeDetails
@@ -17,13 +17,12 @@
                         ChakraCode = code.ChakraCode
                     })
                 </p>
-                <p>@code.StartDate.ToShortDateString() - @code.EndDate.ToShortDateString()</p>
             </div>
         }
     </div>
     <div class="row margin-top-30">
         <div class="col-xs-12">
-            @Html.Partial("_ChakraCodeForecast", Model.MonthlyForecast)
+            @Html.Partial("_ChakraCodeForecast", Model.DailyForecast)
         </div>
     </div>
 </div>

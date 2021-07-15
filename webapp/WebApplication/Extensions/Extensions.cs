@@ -63,6 +63,16 @@ namespace K9.WebApplication.Extensions
 
         public static int ToNumerology(this int value)
         {
+            if (value < 0)
+            {
+                value = value + 9;
+            }
+
+            if (value == 0)
+            {
+                return 0;
+            }
+
             var result = 0;
             while (result >= 10 || result == 0)
             {
@@ -70,11 +80,7 @@ namespace K9.WebApplication.Extensions
                 {
                     result = value;
                 }
-
-                if (result < 0)
-                {
-                    result = result + 9;
-                }
+               
                 result = result.ToString().Select(e => int.Parse(e.ToString())).Sum();
             }
 
