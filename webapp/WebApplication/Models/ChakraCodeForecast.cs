@@ -1,6 +1,7 @@
 ﻿using K9.SharedLibrary.Extensions;
 using K9.WebApplication.Attributes;
 using K9.WebApplication.Enums;
+using K9.WebApplication.Extensions;
 
 namespace K9.WebApplication.Models
 {
@@ -18,9 +19,11 @@ namespace K9.WebApplication.Models
         
         public string Forecast => Attributes.ResourceType.GetValueFromResource(ForecastName) ?? string.Empty;
 
-        private int RowNumberCalculated => RowNumber ?? TopNumber - (int)ChartCode;
+        public string Title => RowNumber == null ? $"{TopNumber}/{BottomNumber}" : RowNumber.ToString();
 
-        private string ForecastName => $"_{ChartCode}_{RowNumberCalculated}";
+        private int RowNumberCalculated => RowNumber ?? (TopNumber - (int)ChartCode).ToNumerology();
+
+        private string ForecastName => $"_{(int)ChartCode}_{RowNumberCalculated}";
 
         private ChakraCodeEnumMetaDataAttribute Attributes => ChartCode.GetAttribute<ChakraCodeEnumMetaDataAttribute>();
     }

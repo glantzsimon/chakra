@@ -33,6 +33,8 @@ namespace K9.WebApplication.Models
         public List<ChakraCodePlannerModel> MonthlyPlannerCodes { get; set; }
         
         public List<ChakraCodePlannerModel> YearlyPlannerCodes { get; set; }
+
+        public List<ChakraCodePlannerModel> DailyPlannerCodes { get; set; }
         
         public List<DharmaChakraCodeModel> DharmaCodes { get; set; }
 

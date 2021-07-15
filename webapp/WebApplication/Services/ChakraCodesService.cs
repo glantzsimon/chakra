@@ -25,6 +25,7 @@ namespace K9.WebApplication.Services
             model.CurrentMonth = CalculateCurrentMonth(model.PersonModel);
             model.MonthlyPlannerCodes = CalculateMonthChakraCodes(model.PersonModel);
             model.YearlyPlannerCodes = CalculateYearlyPlannerChakraCodes(model.PersonModel);
+            model.DailyPlannerCodes = CalculateDailyPlannerChakraCodes(model.PersonModel);
             model.DharmaCodes = CalculateDharmaCodes(model.PersonModel);
             model.YearlyForecast = GetYearlyForecast(model.PersonModel);
             model.MonthlyForecast = GetMonthlyForecast(model.PersonModel);
@@ -132,6 +133,30 @@ namespace K9.WebApplication.Services
                 StartDate = activeMonth.StartDate,
                 EndDate = activeMonth.EndDate
             };
+        }
+
+        public List<ChakraCodePlannerModel> CalculateDailyPlannerChakraCodes(PersonModel person)
+        {
+            var items = new List<ChakraCodePlannerModel>();
+            var currentMonthCode = CalculateCurrentMonth(person);
+            var currentMonth = DateTime.Today.Month;
+            var day = DateTime.Today;
+            var i = 1;
+
+            while (currentMonth == day.Month)
+            {
+                items.Add(new ChakraCodePlannerModel
+                {
+                    ChakraCode = currentMonthCode.ChakraCode,
+                    StartDate = day,
+                    EndDate = day,
+                });
+
+                day = DateTime.Today.AddDays(i);
+                i++;
+            }
+           
+            return items;
         }
 
         public List<ChakraCodePlannerModel> CalculateMonthChakraCodes(PersonModel person)
@@ -484,17 +509,7 @@ namespace K9.WebApplication.Services
 
         private static int CalculateNumerology(int value)
         {
-            var result = 0;
-            while (result >= 10 || result == 0)
-            {
-                if (result == 0)
-                {
-                    result = value;
-                }
-                result = result.ToString().Select(e => int.Parse(e.ToString())).Sum();
-            }
-
-            return result;
+            return value.ToNumerology();
         }
 
         private static bool IsActive(DateTime dateOfBirth, int activeStartYear, int activeEndYear)

@@ -1,5 +1,6 @@
-﻿using System.Text.RegularExpressions;
-using K9.WebApplication.Enums;
+﻿using K9.WebApplication.Enums;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace K9.WebApplication.Extensions
 {
@@ -58,6 +59,26 @@ namespace K9.WebApplication.Extensions
                 code = code == 1 ? 9 : code - 1;
             }
             return code;
+        }
+
+        public static int ToNumerology(this int value)
+        {
+            var result = 0;
+            while (result >= 10 || result == 0)
+            {
+                if (result == 0)
+                {
+                    result = value;
+                }
+
+                if (result < 0)
+                {
+                    result = result + 9;
+                }
+                result = result.ToString().Select(e => int.Parse(e.ToString())).Sum();
+            }
+
+            return result;
         }
     }
 }

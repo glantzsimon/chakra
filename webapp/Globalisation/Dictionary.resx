@@ -340,4 +340,58 @@
   <data name="_7_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>forecasts\7-9.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="_8_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>forecasts\8-1.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="_8_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>forecasts\8-2.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="_8_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>forecasts\8-3.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="_8_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>forecasts\8-4.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="_8_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>forecasts\8-5.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="_8_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>forecasts\8-6.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="_8_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>forecasts\8-7.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="_8_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>forecasts\8-8.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="_8_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>forecasts\8-9.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="_9_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>forecasts\9-1.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="_9_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>forecasts\9-2.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="_9_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>forecasts\9-3.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="_9_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>forecasts\9-4.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="_9_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>forecasts\9-5.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="_9_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>forecasts\9-6.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="_9_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>forecasts\9-7.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="_9_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>forecasts\9-8.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="_9_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>forecasts\9-9.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>

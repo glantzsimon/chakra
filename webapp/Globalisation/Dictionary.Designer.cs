@@ -1213,6 +1213,150 @@ namespace K9.Globalisation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Positive sowing period. start immediately. Hard headed, dynamic time.    
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Grounding and solid, this time is for foundations and whatever is begun here will likely to survive. This can be from the concrete of your house, or in the spiritual cycles time to initiate new practices or add them to make stronger sadhana.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _9_1 {
+            get {
+                return ResourceManager.GetString("_9_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Time to devote to social activities; very feminine passive time, watch procrastination.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Time to spread out and connect, utilizing forces of others to help in your projects, or letting them become part of it. Go with the flow but remain centered in your own inspiration that rooted you in the beginnings of this cycle.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _9_2 {
+            get {
+                return ResourceManager.GetString("_9_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Time of immense activity with the urge to do more, this will change halfway through the cycle as one seems to run out of steam.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Physically one should be active during the first part, applying energy to the rejuvenation of body and transformation of mind. Time to accomplishment but watch the clock.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _9_3 {
+            get {
+                return ResourceManager.GetString("_9_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Strict detail attention, all tests. Do not attempt anything unusual or difficult.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Time for cleansing of the body, and of weeding out feelings and negative images from the mind. Time of service and compassionate healing.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _9_4 {
+            get {
+                return ResourceManager.GetString("_9_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Time of tremendous positivity. Get out and get things done. Re-sow-remending period.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Watch procrastination, as there might be too many ideas to deal with and the subsequent tendency to just dream about the possibilities. Time to express and layout some plans at least; be realistic about what can be done and allow the wisdom of the next cycle to make decisions.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _9_5 {
+            get {
+                return ResourceManager.GetString("_9_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Good family time. decisions regarding family; fertility time for women, conception, union, positive.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    This is a very sober time for decisions in general bearing in mind that the spiritual family is all inclusive. Seeing both the sides of the coin is easy at this time so a little contemplation is in order.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _9_6 {
+            get {
+                return ResourceManager.GetString("_9_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Period of jubilee; time of rest. Meditation and harmony; good time for creative writing.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Relax during the first part and recognise that you are part of an eternal spiritual reality. Feel and express gratitude; in the latter half there will be an inflow of rewards and benefits that carry on through the next cycle. These can easily be feelings of bliss and higher states of consciousness.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _9_7 {
+            get {
+                return ResourceManager.GetString("_9_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Very positive time to buy or sell at a profit, investments. Reward for the work of the previous cycles. Go shopping now.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Continuation of the positive rewarding that began in the 7 cycle, again this can be material or spiritual depending on what you have been working towards - can easily be both.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _9_8 {
+            get {
+                return ResourceManager.GetString("_9_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;h3&gt;
+        ///    &lt;strong&gt;
+        ///        Completion time; keep under control. Spiritual fulfilment.
+        ///    &lt;/strong&gt;
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    Remain mindful of spiritual practices at this time will draw one upwards towards blissful attainment. Let the mind review life in perspective, as an overview with insights about how to re- align actions with the universal pattern in coming times. ( Next cycles. )
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string _9_9 {
+            get {
+                return ResourceManager.GetString("_9_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to They are freedom loving, fearless and have a desire to express, especially through the voice or writing. They are here to express. Without their voice no one would ever hear the demand for change. They do well in communications/media, marketing and public speaking..
         /// </summary>
         public static string akashic {
