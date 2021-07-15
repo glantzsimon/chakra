@@ -388,13 +388,13 @@ namespace K9.WebApplication.Services
         public ChakraCodeForecast GetMonthlyForecast(PersonModel person, int? offset = 0)
         {
             var yearEnergy = CalculateCurrentYear(person);
-            var month = CalculateNumerology(DateTime.Today.Month + (offset ?? 0));
-            var x = CalculateNumerology(yearEnergy.ChakraCodeNumber + month);
+            var currentMonth = CalculateCurrentMonth(person, offset);
+            var x = CalculateNumerology(yearEnergy.ChakraCodeNumber + currentMonth.ChakraCodeNumber);
 
             return new ChakraCodeForecast
             {
                 ChartCode = yearEnergy.ChakraCode,
-                TopNumber = month,
+                TopNumber = currentMonth.ChakraCodeNumber,
                 BottomNumber = x
             };
         }
@@ -402,7 +402,7 @@ namespace K9.WebApplication.Services
         public ChakraCodeForecast GetDailyForecast(PersonModel person, int? offset = 0)
         {
             var monthEnergy = CalculateCurrentMonth(person);
-            var x = CalculateNumerology(monthEnergy.ChakraCodeNumber + DateTime.Today.Day + (offset ?? 0));
+            var x = CalculateNumerology(DateTime.Today.Day + (offset ?? 0));
 
             return new ChakraCodeForecast
             {

@@ -21,7 +21,7 @@ namespace K9.WebApplication.Models
 
         public string Title => RowNumber == null ? $"{(int)ChartCode} - {TopNumber}/{BottomNumber}" : $"{(int)ChartCode} - {RowNumber}";
 
-        private int RowNumberCalculated => RowNumber ?? (TopNumber - (int)ChartCode).ToNumerology();
+        private int RowNumberCalculated => RowNumber ?? (TopNumber.Decrement((int)ChartCode)).ToNumerology();
 
         private string ForecastName => $"_{(int)ChartCode}_{RowNumberCalculated}";
 
