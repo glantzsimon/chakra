@@ -18,7 +18,7 @@ namespace K9.WebApplication.Services
                 return model;
             }
 
-            SessionHelper.SetValue(SessionConstants.DateOfBirth, model.PersonModel.DateOfBirth.ToString(FormatConstants.SessionDateTimeFormat));
+            //SessionHelper.SetValue(SessionConstants.DateOfBirth, model.PersonModel.DateOfBirth.ToString(FormatConstants.SessionDateTimeFormat));
 
             model.Dominant = CalculateDominant(model.PersonModel.DateOfBirth);
             model.SubDominant = CalculateSubDominant(model.PersonModel.DateOfBirth);

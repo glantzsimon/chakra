@@ -10,7 +10,7 @@ using Xunit;
 namespace K9.WebApplication.Tests.Unit.Services
 {
     public class ChakraCodesServiceTests
-    {
+    {   
         [Theory]
         [InlineData(1979, 6, 16, EChakraCode.Warrior, EChakraCode.Manifestor, EChakraCode.Royal, EChakraCode.Mystic, EChakraCode.Healer, EChakraCode.Pioneer, EChakraCode.Royal, EChakraCode.Healer)]
         //[InlineData(1984, 6, 21, EChakraCode.Healer, EChakraCode.Seer, EChakraCode.Warrior, EChakraCode.Healer, EChakraCode.Communicator, EChakraCode.Seer, EChakraCode.Seer)]
