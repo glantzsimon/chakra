@@ -1,15 +1,14 @@
-﻿using K9.WebApplication.Enums;
+﻿using K9.WebApplication.Constants;
+using K9.WebApplication.Enums;
 using K9.WebApplication.Extensions;
 using K9.WebApplication.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using K9.Base.WebApplication.Helpers;
-using K9.WebApplication.Constants;
 
 namespace K9.WebApplication.Services
 {
-    public class ChakraCodesService : IChakraCodesService
+    public class fChakraCodesService : IChakraCodesService
     {
         public ChakraCodesModel CalculateChakraCodes(ChakraCodesModel model)
         {
@@ -18,7 +17,7 @@ namespace K9.WebApplication.Services
                 return model;
             }
 
-            //SessionHelper.SetValue(SessionConstants.DateOfBirth, model.PersonModel.DateOfBirth.ToString(FormatConstants.SessionDateTimeFormat));
+            Base.WebApplication.Helpers.SessionHelper.SetValue(SessionConstants.DateOfBirth, model.PersonModel.DateOfBirth.ToString(FormatConstants.SessionDateTimeFormat));
 
             model.Dominant = CalculateDominant(model.PersonModel.DateOfBirth);
             model.SubDominant = CalculateSubDominant(model.PersonModel.DateOfBirth);
@@ -172,11 +171,14 @@ namespace K9.WebApplication.Services
             
             while (currentMonth == day.Month)
             {
+                var offset = day.Day - DateTime.Today.Day;
+
                 items.Add(new ChakraCodePlannerModel
                 {
                     ChakraCode = (EChakraCode)CalculateNumerology(day.Day),
                     StartDate = day,
                     EndDate = day,
+                    Offset = offset
                 });
 
                 day = day.AddDays(i);
@@ -196,12 +198,14 @@ namespace K9.WebApplication.Services
             for (int i = 0; i < 12; i++)
             {
                 var monthNumber = i + 1;
+                var offset = monthNumber - DateTime.Today.Day;
 
                 items.Add(new ChakraCodePlannerModel
                 {
                     ChakraCode = (EChakraCode)monthEnergy,
                     StartDate = GetMonthStartDate((EChakraCode)monthEnergy, monthNumber),
-                    EndDate = GetMonthEndDate((EChakraCode)monthEnergy, monthNumber)
+                    EndDate = GetMonthEndDate((EChakraCode)monthEnergy, monthNumber),
+                    Offset = offset
                 });
 
                 monthEnergy = monthEnergy.Increment();

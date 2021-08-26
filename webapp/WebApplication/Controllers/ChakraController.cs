@@ -42,7 +42,6 @@ namespace K9.WebApplication.Controllers
             if (model.PersonModel != null)
             {
                 model = _chakraCodesService.CalculateChakraCodes(model);
-                K9.Base.WebApplication.Helpers.SessionHelper.SetValue(SessionConstants.DateOfBirth, model.PersonModel.DateOfBirth);
             }
             return View("Index", model);
         }
