@@ -180,7 +180,6 @@ namespace K9.WebApplication.Services
                 });
 
                 day = day.AddDays(i);
-                i++;
             }
 
             return items;
