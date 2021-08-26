@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace K9.WebApplication.Services
 {
-    public class fChakraCodesService : IChakraCodesService
+    public class ChakraCodesService : IChakraCodesService
     {
         public ChakraCodesModel CalculateChakraCodes(ChakraCodesModel model)
         {
