@@ -1,0 +1,21 @@
+﻿@using K9.WebApplication.Enums
+
+<script type="text/javascript">
+
+    $(function() {
+        $(".chakra-code-planner-item").click(function() {
+            var forecastType = $(this).attr("data-forecast-type");
+            var offset = $(this).attr("data-offset");
+
+            ajaxcontroller().get("@Url.Action("CalculateForecast", "Chakra")", {forecastType, offset}).done(
+                function(result) {
+                    if (result.success) {
+                        if (forecastType === "@EForecastType.Yearly") {
+                            $("#yearly-forecast").html(result.data);
+                        }
+                    }
+                });
+        });
+    });
+
+</script>

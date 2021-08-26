@@ -166,11 +166,10 @@ namespace K9.WebApplication.Services
         public List<ChakraCodePlannerModel> CalculateDailyPlannerChakraCodes(PersonModel person)
         {
             var items = new List<ChakraCodePlannerModel>();
-            var currentMonthCode = CalculateCurrentMonth(person);
             var currentMonth = DateTime.Today.Month;
-            var day = DateTime.Today;
             var i = 1;
-
+            var day = new DateTime(DateTime.Today.Year, currentMonth, i);
+            
             while (currentMonth == day.Month)
             {
                 items.Add(new ChakraCodePlannerModel
@@ -180,7 +179,7 @@ namespace K9.WebApplication.Services
                     EndDate = day,
                 });
 
-                day = DateTime.Today.AddDays(i);
+                day = day.AddDays(i);
                 i++;
             }
 
@@ -218,7 +217,7 @@ namespace K9.WebApplication.Services
             var currentYear = CalculateCurrentYear(person);
             var offset = 5;
             var year = DateTime.Today.Year - offset;
-            var yearEnergy = currentYear.ChakraCodeNumber.Decrement(offset);
+            var yearEnergy = currentYear.ChakraCodeNumber.Decrement(offset + 1);
 
             for (int i = 0; i < 12; i++)
             {
@@ -314,6 +313,7 @@ namespace K9.WebApplication.Services
 
             code = items.First(e => e.ChakraCodeNumber == 9);
             age = code.Age;
+            skip = 0;
 
             while (age >= 0)
             {
