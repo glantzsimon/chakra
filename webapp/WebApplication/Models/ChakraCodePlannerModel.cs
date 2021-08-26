@@ -18,7 +18,7 @@ namespace K9.WebApplication.Models
 
         public DateTime Month => GetMonth();
 
-        public bool IsCurrent => DateTime.Now.IsBetween(StartDate, EndDate);
+        public bool IsCurrent => DateTime.Now.IsBetween(StartDate, EndDate) || DateTime.Today == StartDate && DateTime.Today == EndDate;
 
         public string Title => $"{StartDate.Year - EndDate.Year}";
 
