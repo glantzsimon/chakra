@@ -7,11 +7,11 @@
     var panelBodyClass = hasImage ? "panel-body-image" : "";
 }
 <div id="@Model.Id" style="position: relative; top: -180px;"></div>
-<div class="panel-group">
+<div class="panel-group" data-panel-container-id="@Model.Id">
     <div class="panel panel-default">
         <div class="panel-heading text-center">
             <h5 class="panel-title">
-                <a class="collapsible-panel-link" data-panel-id="@Model.Id" data-toggle="collapse" href="#@id">@Model.Title <i class="fa @Model.CaretCssClass"></i></a>
+                <a class="collapsible-panel-link" data-panel-id="@Model.Id" data-toggle="collapse" href="#@id"><span class="panel-title-text">@Model.Title</span> <i class="fa @Model.CaretCssClass"></i></a>
             </h5>
         </div>
         

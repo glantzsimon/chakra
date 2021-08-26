@@ -380,7 +380,8 @@ namespace K9.WebApplication.Services
             {
                 ChartCode = dominant.ChakraCode,
                 TopNumber = yearEnergy.ChakraCodeNumber,
-                BottomNumber = x
+                BottomNumber = x,
+                ForecastType = EForecastType.Yearly
             };
         }
 
@@ -394,7 +395,8 @@ namespace K9.WebApplication.Services
             {
                 ChartCode = yearEnergy.ChakraCode,
                 TopNumber = currentMonth.ChakraCodeNumber,
-                BottomNumber = x
+                BottomNumber = x,
+                ForecastType = EForecastType.Monthly
             };
         }
 
@@ -406,7 +408,8 @@ namespace K9.WebApplication.Services
             return new ChakraCodeForecast
             {
                 ChartCode = monthEnergy.ChakraCode,
-                RowNumber = x
+                RowNumber = x,
+                ForecastType = EForecastType.Daily
             };
         }
 
