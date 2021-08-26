@@ -7,27 +7,29 @@
             var $el = $(this);
             var forecastType = $el.attr("data-forecast-type");
             var offset = $el.attr("data-offset");
+            var $panel, $container;
 
-            $el.parent().select(".month-chakra-code-container").removeClass("current");
-            $el.select(".month-chakra-code-container").addClass("current");
+            if (forecastType === "@EForecastType.Yearly") {
+                $panel = $("[data-panel-container-id='yearly-forecast']");
+                $container = $("#yearly-forecast-container");
+            }
+            else if (forecastType === "@EForecastType.Monthly") {
+                $panel = $("[data-panel-container-id='monthly-forecast']");
+                $container = $("#monthly-forecast-container");
+            }
+            else if (forecastType === "@EForecastType.Daily") {
+                $panel = $("[data-panel-container-id='daily-forecast']");
+                $container = $("#daily-forecast-container");
+            }
+
+            $container.find(".month-chakra-code-container").removeClass("current");
+            $el.closest(".month-chakra-code-container").addClass("current");
 
             ajaxcontroller().get("@Url.Action("CalculateForecast", "Chakra")", {forecastType, offset}).done(
                 function(result) {
                     if (result.success) {
-                        var $panel = null;
-                        debugger;
-                        if (forecastType === "@EForecastType.Yearly") {
-                            $panel = $("[data-panel-container-id='yearly-forecast']");
-                        }
-                        else if (forecastType === "@EForecastType.Monthly") {
-                            $panel = $("[data-panel-container-id='monthly-forecast']");
-                        }
-                        else if (forecastType === "@EForecastType.Daily") {
-                            $panel = $("[data-panel-container-id='daily-forecast']");
-                        }
-
-                        $panel.closest(".panel-title-text").html(result.data.Title);
-                        $panel.closest(".panel-body").html(result.data.Forecast);
+                        $panel.find(".panel-title-text").html(result.data.Title);
+                        $panel.find(".panel-body").html(result.data.Forecast);
                     }
                 });
         });

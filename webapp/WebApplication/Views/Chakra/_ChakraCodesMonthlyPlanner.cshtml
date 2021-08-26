@@ -5,7 +5,7 @@
 
 <div class="well">
     <h2>Yearly Outlook</h2>
-    <div class="row">
+    <div class="row" id="monthly-forecast-container">
         @foreach (var code in Model.MonthlyPlannerCodes)
         {
             <div class="col-xs-4 col-sm-3 col-md-2 month-chakra-code-container @code.IsCurrentCssClass">
