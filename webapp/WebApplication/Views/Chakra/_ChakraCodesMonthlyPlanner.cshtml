@@ -16,7 +16,8 @@
                     @Html.Partial("_ChakraCodeSmall", new ChakraCodeDetails
                     {
                         ChakraCode = code.ChakraCode,
-                        Type = EForecastType.Monthly
+                        Type = EForecastType.Monthly,
+                        Offset = code.Offset
                     })
                 </p>
                 <p>@code.StartDate.ToShortDateString() - @code.EndDate.ToShortDateString()</p>

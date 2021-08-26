@@ -16,7 +16,8 @@
                     @Html.Partial("_ChakraCodeSmall", new ChakraCodeDetails
                     {
                         ChakraCode = code.ChakraCode,
-                        Type = EForecastType.Daily
+                        Type = EForecastType.Daily,
+                        Offset = code.Offset
                     })
                 </p>
             </div>
