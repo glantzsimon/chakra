@@ -5,6 +5,7 @@ using K9.WebApplication.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web;
 
 namespace K9.WebApplication.Services
 {
@@ -17,7 +18,8 @@ namespace K9.WebApplication.Services
                 return model;
             }
 
-            Base.WebApplication.Helpers.SessionHelper.SetValue(SessionConstants.DateOfBirth, model.PersonModel.DateOfBirth.ToString(FormatConstants.SessionDateTimeFormat));
+            if (HttpContext.Current != null)
+                Base.WebApplication.Helpers.SessionHelper.SetValue(SessionConstants.DateOfBirth, model.PersonModel.DateOfBirth.ToString(FormatConstants.SessionDateTimeFormat));
 
             model.Dominant = CalculateDominant(model.PersonModel.DateOfBirth);
             model.SubDominant = CalculateSubDominant(model.PersonModel.DateOfBirth);
@@ -168,7 +170,7 @@ namespace K9.WebApplication.Services
             var currentMonth = DateTime.Today.Month;
             var i = 1;
             var day = new DateTime(DateTime.Today.Year, currentMonth, i);
-            
+
             while (currentMonth == day.Month)
             {
                 var offset = day.Day - DateTime.Today.Day;
