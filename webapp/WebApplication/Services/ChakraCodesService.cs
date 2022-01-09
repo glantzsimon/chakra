@@ -104,6 +104,7 @@ namespace K9.WebApplication.Services
         public ChakraCodeDetails CalculateCurrentYear(PersonModel person, int? offset = null)
         {
             var result = CalculateBirthYear(person).ChakraCode;
+            var year = person.DateOfBirth.Year + person.YearsOld;
 
             result = (EChakraCode)(((int)result + person.YearsOld) % 9);
 
@@ -112,7 +113,7 @@ namespace K9.WebApplication.Services
                 result++;
             }
 
-            var yearEndDate = GetYearEndDate(result);
+            var yearEndDate = GetYearEndDate(result, year);
             if (yearEndDate < DateTime.Today)
             {
                 result = result.Increment();
@@ -220,9 +221,11 @@ namespace K9.WebApplication.Services
         {
             var items = new List<ChakraCodePlannerModel>();
             var currentYear = CalculateCurrentYear(person);
+            var year = person.DateOfBirth.Year + person.YearsOld;
             var offset = 5;
-            var year = DateTime.Today.Year - offset;
             var yearEnergy = currentYear.ChakraCodeNumber.Decrement(offset + 1);
+
+            year = year - offset;
 
             for (int i = 0; i < 12; i++)
             {
