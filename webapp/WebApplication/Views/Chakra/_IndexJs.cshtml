@@ -6,7 +6,7 @@
         $(".chakra-code-planner-item").click(function() {
             var $el = $(this);
             var forecastType = $el.attr("data-forecast-type");
-            var offset = $el.attr("data-offset");
+            var offset = ($el.attr("data-offset") || 0);
             var $panel, $container;
 
             if (forecastType === "@EForecastType.Yearly") {

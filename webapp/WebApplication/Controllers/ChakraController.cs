@@ -55,16 +55,16 @@ namespace K9.WebApplication.Controllers
 
             switch (forecastType)
             {
-                case EForecastType.Monthly:
-                    result = _chakraCodesService.GetMonthlyForecast(personModel, offset);
-                    break;
-
                 case EForecastType.Daily:
                     result = _chakraCodesService.GetDailyForecast(personModel, offset);
                     break;
 
+                case EForecastType.Monthly:
+                    result = _chakraCodesService.GetMonthlyForecast(personModel, offset - 1);
+                    break;
+
                 default:
-                    result = _chakraCodesService.GetYearlyForecast(personModel, offset);
+                    result = _chakraCodesService.GetYearlyForecast(personModel, offset - 1);
                     break;
             }
 
