@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
@@ -22,12 +23,17 @@ namespace K9.WebApplication
 
 			DataConfig.InitialiseDatabase();
 			AuthConfig.InitialiseWebSecurity();
-            AuthConfig.SetXframeOptions();
 			DataConfig.InitialiseUsersAndRoles();
 
 		    AntiForgeryConfig.SuppressIdentityHeuristicChecks = true;
 
 		    Stripe.StripeConfiguration.SetApiKey(ConfigurationManager.AppSettings["SecretKey"]);
         }
+
+	    protected void OnAuthorizeRequest(object sender, EventArgs e)
+	    {
+	        var application = (HttpApplication)sender;
+	        AuthConfig.SetXframeOptions(application.Context);
+	    }
 	}
 }

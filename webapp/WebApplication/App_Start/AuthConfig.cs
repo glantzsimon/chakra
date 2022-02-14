@@ -11,9 +11,9 @@ namespace K9.WebApplication
 			DatabaseInitialiser<Db>.InitialiseWebsecurity();
 		}
 
-	    public static void SetXframeOptions()
+	    public static void SetXframeOptions(HttpContext applicationContext)
 	    {
-	        HttpContext.Current.Response.Headers.Add("X-Frame-Options", "https://shubhraartist.wixsite.com");
+	        applicationContext.Response.Headers.Add("X-Frame-Options", "https://shubhraartist.wixsite.com");
 	    }
 	}
 }
