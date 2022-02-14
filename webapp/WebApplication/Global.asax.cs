@@ -22,6 +22,7 @@ namespace K9.WebApplication
 
 			DataConfig.InitialiseDatabase();
 			AuthConfig.InitialiseWebSecurity();
+            AuthConfig.SetXframeOptions();
 			DataConfig.InitialiseUsersAndRoles();
 
 		    AntiForgeryConfig.SuppressIdentityHeuristicChecks = true;
