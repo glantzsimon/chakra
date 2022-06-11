@@ -16,12 +16,12 @@ namespace K9.WebApplication.Models
         public int BottomNumber { get; set; }
 
         public int? RowNumber { get; set; }
-
+        
         public string Name => Attributes.Name;
 
         public string Forecast => Attributes.ResourceType.GetValueFromResource(ForecastName) ?? string.Empty;
 
-        public string Title => RowNumber == null ? $"{(int)ChartCode} - {TopNumber}/{BottomNumber}" : $"{(int)ChartCode} - {RowNumber}";
+        public string Title => GetForecastTitle();
 
         public string ForecastPanelId => GetForecastPanelId();
 
@@ -45,5 +45,21 @@ namespace K9.WebApplication.Models
         private string ForecastName => $"_{(int)ChartCode}_{RowNumberCalculated}";
 
         private ChakraCodeEnumMetaDataAttribute Attributes => ChartCode.GetAttribute<ChakraCodeEnumMetaDataAttribute>();
+
+        private string GetForecastTitle()
+        {
+            return RowNumber == null
+                ? $"{(int) ChartCode} - {TopNumber}/{BottomNumber}"
+                : $"{(int) ChartCode} - {CalculateDailyNumbers()}";
+        }
+
+        private string CalculateDailyNumbers()
+        {
+            var chartCodeNumber = (int)ChartCode;
+            var topNumber = (RowNumber.Value + chartCodeNumber).ToNumerology();
+            var bottomNumber = (RowNumber.Value + (chartCodeNumber * 2)).ToNumerology();
+
+            return $"{topNumber}/{bottomNumber}";
+        }
     }
 }
